@@ -1,0 +1,17 @@
+.container-prime {
+  width: 100%;
+  display: flex;
+  background: rgba(24, 26, 47, 255);
+  color: white;
+}
+.container-home-search {
+  width: 50%;
+  margin-left: 8rem;
+  margin-top: 10%;
+}
+.img-home-container {
+  width: 50%;
+}
+.img-home-container img {
+  width: 90%;
+}

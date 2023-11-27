@@ -1,0 +1,30 @@
+nav {
+  width: 100%;
+  display: flex;
+  background-color: aqua;
+  justify-content: center;
+}
+.portato-img-icon {
+  margin-top: 0.5rem;
+  width: 30px;
+  height: 30px;
+}
+.user-img {
+  margin-top: 1rem;
+  margin-left: 6rem;
+  width: 20px;
+  height: 20px;
+}
+nav ul {
+  margin-right: 3rem;
+  margin-left: 3rem;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+nav ul li {
+  width: 100%;
+  background-color: #f0ffff;
+  display: block;
+}

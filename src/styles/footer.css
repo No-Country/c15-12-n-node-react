@@ -1,0 +1,35 @@
+footer {
+  display: flex;
+  padding-left: 5rem;
+  justify-content: center;
+}
+.footer-colunm1 {
+  justify-content: space-between;
+}
+.footer ul {
+  list-style: none;
+}
+.colunm2 {
+  text-align: center;
+}
+
+.imgSocial {
+  width: 25px;
+}
+.icon-social-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+}
+.icon-social-container li {
+  width: 100%;
+}
+.container-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 100px;
+}
+.copyrigth {
+  text-align: center;
+  border-top: 1px solid black;
+}
