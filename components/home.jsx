@@ -4,13 +4,11 @@ import teacher from '../src/assets/images_project/Nueva carpeta/home-teacher.png
 import violin from '../src/assets/images_project/Nueva carpeta/violin.png';
 import violonchelo from '../src/assets/images_project/Nueva carpeta/violonchelo.png';
 import contrabajo from '../src/assets/images_project/Nueva carpeta/contrabajo.png';
-import Nav from '../components/nav';
 import Footer from '../components/footer';
 
 function Home() {
   return (
     <>
-      <Nav />
       <div className='container-prime'>
         <div className='container-home-search'>
           <h1>
