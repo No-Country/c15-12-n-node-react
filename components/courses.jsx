@@ -1,4 +1,3 @@
-import React from "react";
 import "../src/styles/courses.css";
 
 const courses = () => {

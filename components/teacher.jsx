@@ -1,9 +1,9 @@
-import React from 'react'
-
 const teacher = () => {
   return (
-    <div>teacher</div>
-  )
-}
+    <div>
+      <h1>Hola soy el teacher</h1>
+    </div>
+  );
+};
 
-export default teacher
+export default teacher;
