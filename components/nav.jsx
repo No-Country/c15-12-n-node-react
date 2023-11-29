@@ -1,7 +1,11 @@
 import '../src/styles/nav.css';
 import portatoIcon from '../src/assets/images_project/Nueva carpeta/guitarra.png';
 import userIcon from '../src/assets/images_project/Nueva carpeta/usuario.png';
-function Nav() {
+import Courses from '../components/courses';
+import Blog from '../components/blog';
+import { Routes, Route, Link } from 'react-router-dom';
+
+const Nav = () => {
   return (
     <>
       <nav>
@@ -12,12 +16,20 @@ function Nav() {
         />
         <h5>Academia Portato</h5>
         <ul>
-          <li>Home</li>
+          <Routes>
+            <Route path='/courses' element={<Courses />} />
+            <Route path='/blog' element={<Blog />} />
+          </Routes>
+          {/* <li>Home</li> */}
           <li>About</li>
-          <li>Courses</li>
+          <li>
+            <Link to='/courses'>Courses</Link>
+          </li>
           <li>Teacher</li>
           <li>Review</li>
-          <li>Blog</li>
+          <li>
+            <Link to='/blog'>blog</Link>
+          </li>
           <li>Contact</li>
         </ul>
         <div className='container-img'>
@@ -26,6 +38,6 @@ function Nav() {
       </nav>
     </>
   );
-}
+};
 
 export default Nav;
