@@ -4,7 +4,10 @@ import teacher from '../src/assets/images_project/Nueva carpeta/home-teacher.png
 import violin from '../src/assets/images_project/Nueva carpeta/violin.png';
 import violonchelo from '../src/assets/images_project/Nueva carpeta/violonchelo.png';
 import contrabajo from '../src/assets/images_project/Nueva carpeta/contrabajo.png';
+import woman from '../src/assets/images_project/Nueva carpeta/img-woman.jpg';
+import comillas from '../src/assets/images_project/Nueva carpeta/comillas.png';
 import Footer from '../components/footer';
+import SignupForm from '../components/form';
 
 function Home() {
   return (
@@ -56,6 +59,45 @@ function Home() {
           </li>
         </ul>
       </div>
+      <div className='container-card-reviews-principal'>
+        <h1>COMENTARIOS DE ESTUDIANTES</h1>
+        <div className='container-reviews'>
+          <ul>
+            <li>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Doloremque temporibus obcaecati
+              </p>
+              <div className='container-cards-img'>
+                <img className='profile-img' src={woman} alt='' />
+                <img src={comillas} alt='' />
+              </div>
+            </li>
+            <li>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Doloremque temporibus obcaecati
+              </p>
+              <div className='container-cards-img'>
+                <img className='profile-img' src={woman} alt='' />
+                <img src={comillas} alt='' />
+              </div>
+            </li>
+            <li>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Doloremque temporibus obcaecati
+              </p>
+              <div className='container-cards-img'>
+                <img className='profile-img' src={woman} alt='' />
+                <img src={comillas} alt='' />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <SignupForm />
       <Footer />
     </>
   );
