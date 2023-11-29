@@ -6,8 +6,7 @@ import violonchelo from '../src/assets/images_project/Nueva carpeta/violonchelo.
 import contrabajo from '../src/assets/images_project/Nueva carpeta/contrabajo.png';
 import woman from '../src/assets/images_project/Nueva carpeta/img-woman.jpg';
 import comillas from '../src/assets/images_project/Nueva carpeta/comillas.png';
-import Footer from '../components/footer';
-import SignupForm from '../components/form';
+import SignupForm from './form';
 
 function Home() {
   return (
@@ -98,7 +97,6 @@ function Home() {
       </div>
 
       <SignupForm />
-      <Footer />
     </>
   );
 }

@@ -1,6 +1,10 @@
-#root {
+* {
   margin: 0;
   padding: 0;
+}
+
+#root {
+  /* aqui agregar variables  */
 }
 .App {
   width: 100%;
