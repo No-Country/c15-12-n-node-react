@@ -11,7 +11,7 @@ const Nav = () => {
         src={portatoIcon}
         alt='portato-img-icon'
       />
-      <h5>Academia Portato</h5>
+      <h5>AC Portato</h5>
       <ul>
         <li>
           <Link to='/'>Home</Link>

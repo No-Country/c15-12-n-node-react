@@ -13,16 +13,18 @@ function Home() {
     <>
       <div className='container-prime'>
         <div className='container-home-search'>
-          <h1>
-            El mejor curso
-            <br /> lo encuentras aquì
-          </h1>
+          <h1>La Mejor Enseñanza Esta Aquì</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             <br />
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Lorem ipsum dolor sit amet consectetur.
           </p>
-          <button>Saber mas</button>
+          <a href='/' className='btn-learnMore'>
+            <span className='text text-1'>Saber Mas</span>
+            <span className='text text-2' aria-hidden='true'>
+              Saber Mas
+            </span>
+          </a>
         </div>
         <div className='img-home-container'>
           <img className='img-home-portato' src={portatoimg} alt='' />

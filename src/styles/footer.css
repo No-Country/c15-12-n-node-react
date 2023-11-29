@@ -1,7 +1,6 @@
 footer {
-  display: flex;
-  padding-left: 5rem;
-  justify-content: center;
+  margin-left: 10rem;
+  bottom: 0;
 }
 .footer-colunm1 {
   justify-content: space-between;
