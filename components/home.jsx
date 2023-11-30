@@ -66,7 +66,6 @@ function Home() {
       </div>
       <div className='container-card-reviews-principal'>
         <h1 className='titulo'>COMENTARIOS DE ESTUDIANTES</h1>
-
         <img className='separator-img' src={separator} alt='' />
         <div className='container-reviews'>
           <ul>
