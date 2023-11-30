@@ -6,6 +6,8 @@ import violonchelo from '../src/assets/images_project/Nueva carpeta/violonchelo.
 import contrabajo from '../src/assets/images_project/Nueva carpeta/contrabajo.png';
 import woman from '../src/assets/images_project/Nueva carpeta/img-woman.jpg';
 import comillas from '../src/assets/images_project/Nueva carpeta/comillas.png';
+import zigzag from '../src/assets/images_project/Nueva carpeta/zigzag.png';
+import separator from '../src/assets/images_project/Nueva carpeta/separator.svg';
 import SignupForm from './form';
 
 function Home() {
@@ -31,7 +33,8 @@ function Home() {
         </div>
       </div>
       <div className='container-aboutUs'>
-        <h1>SOBRE NOSOTROS</h1>
+        <h1 className='titulo'>SOBRE NOSOTROS</h1>
+        <img className='separator-img' src={separator} alt='' />
         <div className='container-img-aboutUs'>
           <img className='img-aboutUs' src={teacher} alt='' />
         </div>
@@ -44,7 +47,8 @@ function Home() {
       </div>
 
       <div className='container-morePopular'>
-        <h1>MAS POPULARES</h1>
+        <h1 className='titulo'>MAS POPULARES</h1>
+        <img className='separator-img' src={separator} alt='' />
         <ul>
           <li>
             <img src={violin} alt='' />
@@ -61,7 +65,9 @@ function Home() {
         </ul>
       </div>
       <div className='container-card-reviews-principal'>
-        <h1>COMENTARIOS DE ESTUDIANTES</h1>
+        <h1 className='titulo'>COMENTARIOS DE ESTUDIANTES</h1>
+
+        <img className='separator-img' src={separator} alt='' />
         <div className='container-reviews'>
           <ul>
             <li>
@@ -69,9 +75,10 @@ function Home() {
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Doloremque temporibus obcaecati
               </p>
+              <img className='zigzag' src={zigzag} alt='' />
               <div className='container-cards-img'>
                 <img className='profile-img' src={woman} alt='' />
-                <img src={comillas} alt='' />
+                <img className='backtips-img' src={comillas} alt='' />
               </div>
             </li>
             <li>
@@ -79,9 +86,10 @@ function Home() {
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Doloremque temporibus obcaecati
               </p>
+              <img className='zigzag' src={zigzag} alt='' />
               <div className='container-cards-img'>
                 <img className='profile-img' src={woman} alt='' />
-                <img src={comillas} alt='' />
+                <img className='backtips-img' src={comillas} alt='' />
               </div>
             </li>
             <li>
@@ -89,15 +97,15 @@ function Home() {
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Doloremque temporibus obcaecati
               </p>
+              <img className='zigzag' src={zigzag} alt='' />
               <div className='container-cards-img'>
                 <img className='profile-img' src={woman} alt='' />
-                <img src={comillas} alt='' />
+                <img className='backtips-img' src={comillas} alt='' />
               </div>
             </li>
           </ul>
         </div>
       </div>
-
       <SignupForm />
     </>
   );
