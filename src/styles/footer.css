@@ -1,6 +1,20 @@
+:root {
+  --primary-color: #12c2b9;
+  --secondary: #dbfffe;
+  --black: #141414;
+  --white: #fff;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
 footer {
-  margin-left: 10rem;
+  color: gray;
+  background-color: var(--secondary);
   bottom: 0;
+  box-shadow: 1px 0px 17px 0px gray;
+}
+.container-footer {
+  margin-left: 10rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
 }
 .footer-colunm1 {
   justify-content: space-between;
@@ -13,6 +27,7 @@ footer {
 }
 
 .imgSocial {
+  opacity: 70%;
   width: 25px;
 }
 .icon-social-container {
@@ -30,5 +45,5 @@ footer {
 }
 .copyrigth {
   text-align: center;
-  border-top: 1px solid black;
+  border-top: 1px solid gray;
 }
