@@ -25,6 +25,16 @@ connectDB();
 //mongoose.connect('mongodb+srv://dai123:<password>@login.rh7hm7f.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.get('/', (req, res) => {
+  res.send(`
+  <h1>Bienvenido a nuestra aplicación</h1>
+    <ul>
+      <li><a href="/register">Registrarse</a></li>
+      <li><a href="/login">Iniciar sesión</a></li>
+    </ul>
+  `);
+});
+
+app.get('/register', (req, res) => {
   res.render('register');
 });
 
