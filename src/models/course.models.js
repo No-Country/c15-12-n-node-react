@@ -1,5 +1,11 @@
 const mongoose = require("mongoose");
 
+const nivelesPreciosEnum = {
+  basico: "20USD",
+  intermedio: "50USD",
+  avanzado: "90USD",
+};
+
 const CourseSchema = mongoose.Schema({
   nombrecurso: {
     type: String,
@@ -37,9 +43,11 @@ const CourseSchema = mongoose.Schema({
     required: true,
     validate: {
       validator: function (value) {
-        return /^[a-zA-Z0-9]+$/.test(value);
+        return /^[0-9]+USD$/.test(value);
       },
+      message: "Formato de precio no válido (por ejemplo, '20USD')",
     },
+    enum: Object.values(nivelesPreciosEnum),
   },
 });
 
