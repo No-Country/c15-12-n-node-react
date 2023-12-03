@@ -8,12 +8,24 @@ const CourseSchema = mongoose.Schema({
   email: {
     type: String,
     required: true,
-    validate: {
-      validator: function (value) {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    unique: true,
+    minlength: [5, "El correo electrónico debe tener al menos 5 caracteres"],
+    validate: [
+      {
+        validator: async function (value) {
+          const emailExists = await this.constructor.findOne({ email: value });
+          return !emailExists;
+        },
+        message: "Este correo electrónico ya está registrado",
       },
-      message: "Dirección de email inválida",
-    },
+      {
+        validator: function (value) {
+          // Validación de formato de correo electrónico
+          return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value);
+        },
+        message: "Formato de correo electrónico no válido",
+      },
+    ],
   },
   nivel: {
     type: String,

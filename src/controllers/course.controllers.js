@@ -1,18 +1,29 @@
 const CourseSchema = require("../models/course.models.js");
+const validateMongoDbId = require("../utils/validateMongodbId");
 
 module.exports = {
   CreateCourse: async (req, res) => {
-    const { nombrecurso, email, nivel, precio } = req.body;
-    const newCourse = new CourseSchema({
-      nombrecurso,
-      email,
-      nivel,
-      precio,
-    });
-    newCourse
-      .save()
-      .then((data) => res.json(data))
-      .catch((error) => res.json({ message: error }));
+    try {
+      // Obtener los datos del cuerpo de la solicitud
+      const { nombrecurso, email, nivel, precio } = req.body;
+
+      // Crear una nueva instancia del modelo Course
+      const newCourse = new CourseSchema({
+        nombrecurso,
+        email,
+        nivel,
+        precio,
+      });
+
+      // Guardar el nuevo curso en la base de datos
+      const savedCourse = await newCourse.save();
+
+      // Devolver el nuevo curso guardado
+      res.json(savedCourse);
+    } catch (error) {
+      // Manejar errores durante el proceso de creación y guardado del curso
+      res.status(500).json({ message: error.message });
+    }
   },
 
   GetAllCourses: (req, res) => {
@@ -38,21 +49,32 @@ module.exports = {
       })
       .catch((error) => res.json({ message: error }));
   },
-  UpdateCourse: (req, res) => {
-    const { id } = req.params;
-    const { nombrecurso, email, nivel, precio } = req.body;
-    CourseSchema.updateOne(
-      { _id: id },
-      { $set: { nombrecurso, email, nivel, precio } }
-    )
-      .then((data) => {
-        if (nombre || apellido) {
-          res.json(data);
-        } else {
-          res.json({ message: "No course found" });
-        }
-      })
-      .catch((error) => res.json({ message: error }));
+  UpdateCourse: async (req, res) => {
+    try {
+      // Validar el formato del ID de MongoDB
+      if (!validateMongoDbId(req.course._id)) {
+        return res.status(400).json({ message: "Invalid MongoDB ID" });
+      }
+
+      // Obtener los datos del cuerpo de la solicitud
+      const { nombrecurso, email, nivel, precio } = req.body;
+
+      // Actualizar el curso en la base de datos
+      const updatedCourse = await CourseSchema.findOneAndUpdate(
+        { _id: req.course._id }, // Usar req.course._id en lugar de extraer id de req.course
+        { $set: { nombrecurso, email, nivel, precio } },
+        { new: true } // Devolver el documento actualizado
+      );
+
+      // Verificar si el curso fue encontrado y actualizado
+      if (updatedCourse) {
+        return res.json(updatedCourse);
+      } else {
+        return res.status(404).json({ message: "No course found" });
+      }
+    } catch (error) {
+      return res.status(500).json({ message: error.message });
+    }
   },
   DeleteCourse: (req, res) => {
     const { id } = req.params;
