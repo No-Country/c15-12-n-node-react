@@ -5,6 +5,9 @@ import Footer from '../components/footer';
 import Courses from '../components/courses';
 import Teacher from '../components/teacher';
 import Blog from '../components/blog';
+import About from '../components/about';
+import Review from '../components/review';
+import Contact from '../components/contact';
 import { Routes, Route } from 'react-router-dom';
 
 const App = () => {
@@ -16,6 +19,9 @@ const App = () => {
         <Route path='/courses' element={<Courses />} />
         <Route path='/teacher' element={<Teacher />} />
         <Route path='/blog' element={<Blog />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/review' element={<Review />} />
+        <Route path='/contact' element={<Contact />} />
       </Routes>
       <Footer />
     </div>

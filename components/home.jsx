@@ -10,7 +10,7 @@ import zigzag from '../src/assets/images_project/Nueva carpeta/zigzag.png';
 import separator from '../src/assets/images_project/Nueva carpeta/separator.svg';
 import SignupForm from './form';
 
-function Home() {
+const home =()=> {
   return (
     <>
       <div className='container-prime'>
@@ -110,4 +110,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default home;

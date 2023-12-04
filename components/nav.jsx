@@ -3,7 +3,7 @@ import portatoIcon from '../src/assets/images_project/Nueva carpeta/guitarra.png
 import userIcon from '../src/assets/images_project/Nueva carpeta/usuario.png';
 import { Link } from 'react-router-dom';
 
-const Nav = () => {
+const nav = () => {
   return (
     <nav>
       <img
@@ -16,18 +16,24 @@ const Nav = () => {
         <li>
           <Link to='/'>Home</Link>
         </li>
-        <li>About</li>
+        <li>
+          <Link to='/about'>About</Link>
+        </li>
         <li>
           <Link to='/courses'>Courses</Link>
         </li>
         <li>
           <Link to='/teacher'>Teacher</Link>
         </li>
-        <li>Review</li>
+        <li>
+          <Link to='/review'>Review</Link>
+        </li>
         <li>
           <Link to='/blog'>blog</Link>
         </li>
-        <li>Contact</li>
+        <li>
+          <Link to='/contact'>contacto</Link>
+        </li>
       </ul>
       <div className='container-img'>
         <img className='user-img' src={userIcon} alt='user-img' />
@@ -36,4 +42,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default nav;

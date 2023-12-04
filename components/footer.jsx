@@ -4,7 +4,7 @@ import imgX from '../src/assets/images_project/redes/x.png';
 import imgInstagram from '../src/assets/images_project/redes/instagram.png';
 import imgLinkdin from '../src/assets/images_project/redes/linkedin.png';
 
-function Footer() {
+const footer = () => {
   return (
     <>
       <footer>
@@ -49,6 +49,6 @@ function Footer() {
       </footer>
     </>
   );
-}
+};
 
-export default Footer;
+export default footer;
