@@ -14,25 +14,19 @@ const nav = () => {
       <h5>AC Portato</h5>
       <ul>
         <li>
-          <Link to='/'>Home</Link>
+          <Link to='/'>Inicio</Link>
         </li>
         <li>
-          <Link to='/about'>About</Link>
+          <Link to='/about'>Nosotros</Link>
         </li>
         <li>
-          <Link to='/courses'>Courses</Link>
+          <Link to='/courses'>Cursos</Link>
         </li>
         <li>
-          <Link to='/teacher'>Teacher</Link>
+          <Link to='/blog'>Blog</Link>
         </li>
         <li>
-          <Link to='/review'>Review</Link>
-        </li>
-        <li>
-          <Link to='/blog'>blog</Link>
-        </li>
-        <li>
-          <Link to='/contact'>contacto</Link>
+          <Link to='/contact'>Contacto</Link>
         </li>
       </ul>
       <div className='container-img'>
