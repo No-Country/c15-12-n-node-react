@@ -3,46 +3,57 @@ import { v4 as uuidv4 } from 'uuid';
 import { useState, useEffect } from 'react';
 import '../src/styles/blog.css';
 import news from '../src/assets/images_project/Nueva carpeta/noticias.png';
+import separator from '../src/assets/images_project/Nueva carpeta/separator.svg';
+import Spinner from '../components/spinner';
 
 const blog = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([null]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
-        'https://newsapi.org/v2/everything?q=tesla&from=2023-11-05&sortBy=publishedAt&apiKey=6276b80e1e8e4cf5a56073969ffca1fc'
+        'https://www.alphavantage.co/query?function=NEWS_SENTIMENT&tickers=AAPL&apikey=demo'
       );
-      setData(result.data.articles);
-      console.log(result.data.articles);
+      setData(result.data.feed);
+      setLoading(false);
+      console.log(result.data.feed);
     };
     fetchData();
   }, []);
 
   return (
-    <div className='container-blog'>
-      <h1>NOTICIAS DESTACADAS </h1>
-      <ul className='blog-list'>
-        {data.slice(1, 5).map((item) => (
-          <li key={uuidv4()}>
-            <h2>
-              <strong> {item.title.toUpperCase()} </strong>{' '}
-            </h2>
+    <div className='container-spinner'>
+      {loading ? (
+        <Spinner />
+      ) : (
+        <div className='container-blog'>
+          <h1>NOTICIAS DESTACADAS </h1>
+          <img className='separator-img' src={separator} alt='' />
+          <ul className='blog-list'>
+            {data.slice(1, 5).map((item) => (
+              <li key={uuidv4()}>
+                <h2>
+                  <strong> {item.title.toUpperCase()} </strong>{' '}
+                </h2>
 
-            <br />
-            <img
-              className='img-blog'
-              src={item.urlToImage ? item.urlToImage : news}
-              alt='noticias'
-            />
-            <br />
-            <p>{item.description}</p>
-            <br />
-            <a href={item.url} target='blank'>
-              <strong>{item.url}</strong>
-            </a>
-          </li>
-        ))}
-      </ul>
+                <br />
+                <img
+                  className='img-blog'
+                  src={item.banner_image ? item.banner_image : news}
+                  alt='noticias'
+                />
+                <br />
+                <p>{item.summary}</p>
+                <br />
+                <a href={item.url} target='blank'>
+                  <strong>{item.url}</strong>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };

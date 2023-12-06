@@ -1,4 +1,15 @@
-.courses-componenet {
+:root {
+  --primary-color: #12c2b9;
+  --secondary: #dbfffe;
+  --black: #141414;
+  --white: #fff;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+.courses-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .container-courses {
   width: 100%;
@@ -6,7 +17,6 @@
   flex-flow: row wrap;
   justify-content: space-around;
 }
-
 .ul {
   display: flex;
   gap: 20px;
@@ -18,8 +28,8 @@
 }
 
 .title-courses {
-  font-size: 50px;
-  color: #bb8fce;
+  font-size: 2em;
+  color: var(--primary-color);
   text-align: center;
   margin: 30px;
 }
@@ -53,11 +63,11 @@
 }
 
 .container-botton {
- display: flex;
- width: 100%;
- flex-direction: column;
- justify-content: center;
- align-items: center;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .btn {
   width: 200px;

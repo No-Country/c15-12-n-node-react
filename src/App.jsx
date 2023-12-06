@@ -6,7 +6,7 @@ import Courses from '../components/courses';
 import Blog from '../components/blog';
 import About from '../components/about';
 import Review from '../components/review';
-import Contact from '../components/contact';
+import Contact from '../components/form';
 import { Routes, Route } from 'react-router-dom';
 
 const App = () => {

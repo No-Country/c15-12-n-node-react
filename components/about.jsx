@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import '../src/styles/about.css';
 import Teacher2 from '../src/assets/images_project/Nueva carpeta/home-teacher2.png';
 import videoTeacher1 from '../src/assets/images_project/video/b&gviolin.mp4';
+import separator from '../src/assets/images_project/Nueva carpeta/separator.svg';
 
 const about = () => {
   const videoRef = useRef(null);
@@ -25,6 +26,7 @@ const about = () => {
   return (
     <div className='about-container-principal'>
       <h1>NOSOTROS </h1>
+      <img className='separator-img' src={separator} alt='' />
       <div className='about-container-secundary'>
         <div
           onMouseOver={handleMouseOver}
