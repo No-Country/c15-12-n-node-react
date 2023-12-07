@@ -1,7 +1,18 @@
 import '../src/styles/courses.css';
 import separator from '../src/assets/images_project/Nueva carpeta/separator.svg';
+import { useState } from 'react';
+import Modal from './Modal';
 
 const courses = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
   return (
     <div className='courses-component'>
       <h1 className='title-courses'> SELECT THE PLAN</h1>
@@ -23,8 +34,9 @@ const courses = () => {
           </div>
           <hr />
           <div className='container-botton'>
-            <button className='btn'>Select Plan</button>
+            <button onClick={openModal} className='btn'>Select Plan</button>
           </div>
+          {isModalOpen && <Modal onClose={closeModal} />}
         </div>
         <div className='item-courses'>
           <h1 className='title-card'>Standard</h1>
