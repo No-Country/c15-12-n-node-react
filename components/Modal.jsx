@@ -6,11 +6,18 @@ const Modal = ({ onClose }) => {
   return (
     <div className='modal-overlay'>
       <div className='modal-content'>
-        <h2>Plan Selection Form</h2>
+        <h2 className='modal-title'>Plan Selection Course</h2>
             <form action="">
-                <label htmlFor="">Nombre</label>
+                <label>Nombre</label>
+                <input type="text" placeholder='Nombre' />
+                <label>Apellido</label>
+                <input type="text" placeholder='apellido' />
+                <label htmlFor="">Email</label>
+                <input type="text" placeholder='email' />
+                <label>Contraseña</label>
+                <input type="text" placeholder='password' />
             </form>
-        <button onClick={onClose}>Close</button>
+        <button className='btn-modal' onClick={onClose}>Close</button>
       </div>
     </div>
   );

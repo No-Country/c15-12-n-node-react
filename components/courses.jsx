@@ -54,7 +54,7 @@ const courses = () => {
           </div>
           <hr />
           <div className='container-botton'>
-            <button className='btn'>Select Plan</button>
+            <button onClick={openModal} className='btn'>Select Plan</button>
           </div>
         </div>
         <div className='item-courses'>
@@ -73,7 +73,7 @@ const courses = () => {
           </div>
           <hr />
           <div className='container-botton'>
-            <button className='btn'>Select Plan</button>
+            <button onClick={openModal} className='btn'>Select Plan</button>
           </div>
         </div>
       </div>
