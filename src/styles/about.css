@@ -1,0 +1,51 @@
+:root {
+  --primary-color: #12c2b9;
+  --secondary: #dbfffe;
+  --black: #141414;
+  --white: #fff;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+.about-container-principal {
+  text-align: center;
+  margin: 2rem;
+}
+.about-container-principal h1 {
+  color: var(--primary-color);
+}
+.about-container-secundary {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.container-img-teacher {
+  background-color: var(--secondary);
+  margin-top: -10rem;
+  width: 450px;
+  border-radius: 100%;
+  box-shadow: 5px 1px 15px 1px gray;
+  margin-right: 6rem;
+}
+.video-teacher1 {
+  margin-top: -10rem;
+  width: 600px;
+  height: 500px;
+  border-radius: 50%;
+  margin-right: 6rem;
+  box-shadow: 5px 1px 15px 1px gray;
+}
+.video-teacher1:hover {
+  scale: 1.2;
+  filter: saturate(180%);
+}
+.hide {
+  opacity: 100%;
+}
+.about-container-principal p {
+  font-size: 20px;
+  margin-top: -10rem;
+  width: 500px;
+  text-align: justify;
+  line-height: 2rem;
+}
