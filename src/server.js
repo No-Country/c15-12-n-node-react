@@ -1,9 +1,12 @@
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const registerController = require('../controller/registerController');
 const loginController = require('../controller/loginController');
+const userController = require('../controller/userController');
 const connectDB = require('../config/db');
 const app = express();
+app.use(cors());
 const bodyParser = require('body-parser');
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -52,4 +55,8 @@ app.post('/login', (req, res) => {
   loginController.login(req, res);
 });
 
+app.post('/contacto', (req, res) => {
+  console.log("contacto : " + JSON.stringify(req.body)); // This will print the body of the request
+  userController.guardarUsuario(req, res);
+});
 app.listen(3000, () => console.log('Server running on port 3000'));
