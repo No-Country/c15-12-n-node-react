@@ -32,7 +32,7 @@ module.exports = {
         if (data.length > 0) {
           res.json(data);
         } else {
-          res.json({ message: "No courses found" });
+          res.json({ message: "Cursos no encontrados" });
         }
       })
       .catch((error) => res.json({ message: error }));
@@ -44,7 +44,7 @@ module.exports = {
         if (data) {
           res.json(data);
         } else {
-          res.json({ message: "No course found" });
+          res.json({ message: "Curso no encontrado" });
         }
       })
       .catch((error) => res.json({ message: error }));
@@ -53,7 +53,7 @@ module.exports = {
     try {
       // Validar el formato del ID de MongoDB
       if (!validateMongoDbId(req.course._id)) {
-        return res.status(400).json({ message: "Invalid MongoDB ID" });
+        return res.status(400).json({ message: "ID invalida" });
       }
 
       // Obtener los datos del cuerpo de la solicitud
@@ -70,7 +70,9 @@ module.exports = {
       if (updatedCourse) {
         return res.json(updatedCourse);
       } else {
-        return res.status(404).json({ message: "No course found" });
+        return res
+          .status(404)
+          .json({ message: "Curso no encontrado para actualizar" });
       }
     } catch (error) {
       return res.status(500).json({ message: error.message });
@@ -81,9 +83,9 @@ module.exports = {
     CourseSchema.deleteOne({ _id: id })
       .then((data) => {
         if (data.deletedCount > 0) {
-          res.json({ message: "Course deleted successfully" });
+          res.json({ message: "Curso eliminado satisfactoriamente" });
         } else {
-          res.json({ message: "Course not found or could not be deleted" });
+          res.json({ message: "Curso no encontrado o no puede ser eliminado" });
         }
       })
       .catch((error) => res.json({ message: error }));

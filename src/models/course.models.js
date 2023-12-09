@@ -6,10 +6,19 @@ const nivelesPreciosEnum = {
   avanzado: "90USD",
 };
 
+const instrumentosEnum = ["Violin", "Guitarra", "Arpa", "Ukelele"];
+const toLower = (value) => value.toLowerCase();
+
 const CourseSchema = mongoose.Schema({
   nombrecurso: {
     type: String,
     required: true,
+    validate: {
+      validator: function (value) {
+        return instrumentosEnum.map(toLower).includes(value.toLowerCase());
+      },
+      message: "El instrumento no está en nuestra lista de instrumentos.",
+    },
   },
   email: {
     type: String,
@@ -43,9 +52,13 @@ const CourseSchema = mongoose.Schema({
     required: true,
     validate: {
       validator: function (value) {
-        return /^[0-9]+USD$/.test(value);
+        // Obtener el precio correspondiente al nivel seleccionado
+        const precioEsperado = nivelesPreciosEnum[this.nivel];
+
+        // Comparar el valor ingresado con el precio esperado
+        return value === precioEsperado;
       },
-      message: "Formato de precio no válido (por ejemplo, '20USD')",
+      message: "El precio no corresponde al nivel seleccionado",
     },
     enum: Object.values(nivelesPreciosEnum),
   },
