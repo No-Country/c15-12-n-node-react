@@ -2,6 +2,7 @@ import '../src/styles/nav.css';
 import portatoIcon from '../src/assets/images_project/Nueva carpeta/guitarra.png';
 import userIcon from '../src/assets/images_project/Nueva carpeta/usuario.png';
 import { Link } from 'react-router-dom';
+import ModalLoging from '../components/modalLoginRegister';
 
 const nav = () => {
   return (
@@ -28,13 +29,15 @@ const nav = () => {
         <li>
           <Link to='/contacto'>Contacto</Link>
         </li>
-        <li>
+        {/* <li>
           <Link to='/registrarse'>Registrarse</Link>
         </li>
         <li>
           <Link to='/Login'>Login</Link>
-        </li>
+        </li> */}
       </ul>
+      <ModalLogingyhujn022222222222222222222222222222222222222222t
+      6 />
       <div className='container-img'>
         <img className='user-img' src={userIcon} alt='user-img' />
       </div>
