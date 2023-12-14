@@ -34,13 +34,8 @@ const nav = () => {
         </li>
       </ul>
 
-      <div className='container-img'>
-        <img
-          onClick={() => setIsModalOpen(true)}
-          className='user-img'
-          src={userIcon}
-          alt='user-img'
-        />
+      <div className='container-img' onClick={() => setIsModalOpen(true)}>
+        <img className='user-img' src={userIcon} alt='user-img' />
       </div>
       <ModalLoging
         isOpen={isModalOpen}
