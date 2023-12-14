@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Expone el puerto 3000 fuera del contenedor Docker
-EXPOSE 3001
+EXPOSE 8080
 
 # Ejecuta la aplicación cuando el contenedor Docker se inicia
 CMD [ "node", "src/server.js" ]
