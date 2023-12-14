@@ -5,15 +5,15 @@ FROM node:18-alpine
 WORKDIR /usr/src/app
 
 # Copia package.json y package-lock.json al directorio de trabajo
-COPY package*.json ./
+COPY servidor/package*.json ./
 
 # Instala las dependencias de la aplicación
 RUN npm install
 
 # Copia los archivos de cliente y construye la aplicación de cliente
-COPY ../cliente/package*.json ./cliente/
+COPY cliente/package*.json ./cliente/
 RUN npm install --prefix cliente
-COPY ../cliente/ ./cliente/
+COPY cliente/ ./cliente/
 RUN npm run build --prefix cliente
 
 # Copia el resto del código de la aplicación al directorio de trabajo
@@ -23,4 +23,4 @@ COPY . .
 EXPOSE 8080
 
 # Ejecuta la aplicación cuando el contenedor Docker se inicia
-CMD [ "node", "src/server.js" ]
+CMD [ "node", "servidor/src/server.js" ]

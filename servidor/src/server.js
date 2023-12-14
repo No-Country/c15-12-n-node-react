@@ -61,9 +61,9 @@ app.post('/contacto', (req, res) => {
   userController.guardarUsuario(req, res);
 });
 // Sirve los archivos estáticos de la carpeta build
-app.use(express.static(path.resolve(__dirname, '../../cliente/dist')));
+app.use(express.static(path.resolve(__dirname, './dist')));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '.../../cliente/dist', 'index.html'));
+  res.sendFile(path.resolve(__dirname, './dist', 'index.html'));
 });
-app.listen(8080, () => console.log('Server running on port 8080'));
+app.listen(3001, () => console.log('Server running on port 3001'));
