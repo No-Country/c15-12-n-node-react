@@ -41,7 +41,7 @@ const LoginForm = () => {
   
     return (
       <div className='form-container-prime'>
-        <h1>Iniciar Sesion</h1>
+        <h1>INICIAR SESION</h1>
         <img className='separator-img' src={separator} alt='' />
         <div className='container-form'>
           <form className='form' onSubmit={handleSubmit}>

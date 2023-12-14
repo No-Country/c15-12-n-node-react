@@ -34,20 +34,18 @@ const nav = () => {
         </li>
       </ul>
 
-      <button>
-        <div className='container-img'>
-          <img
-            onClick={() => setIsModalOpen(true)}
-            className='user-img'
-            src={userIcon}
-            alt='user-img'
-          />
-        </div>
-        <ModalLoging
-          isOpen={isModalOpen}
-          closeModal={() => setIsModalOpen(false)}
+      <div className='container-img'>
+        <img
+          onClick={() => setIsModalOpen(true)}
+          className='user-img'
+          src={userIcon}
+          alt='user-img'
         />
-      </button>
+      </div>
+      <ModalLoging
+        isOpen={isModalOpen}
+        closeModal={() => setIsModalOpen(false)}
+      />
     </nav>
   );
 };
