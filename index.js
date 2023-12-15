@@ -4,8 +4,10 @@ const mongoose = require("mongoose");
 const port = process.env.PORT || 3000;
 require("dotenv").config();
 const courseRoutes = require("./src/routes/course.Routes.js");
+const cors = require("cors");
 
 //middleware:
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api", courseRoutes);

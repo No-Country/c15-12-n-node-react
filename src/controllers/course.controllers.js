@@ -5,14 +5,16 @@ module.exports = {
   CreateCourse: async (req, res) => {
     try {
       // Obtener los datos del cuerpo de la solicitud
-      const { nombrecurso, email, nivel, precio } = req.body;
+      const { curso, nivel, precio, nombre, apellido, email } = req.body;
 
       // Crear una nueva instancia del modelo Course
       const newCourse = new CourseSchema({
-        nombrecurso,
-        email,
+        curso,
         nivel,
         precio,
+        nombre,
+        apellido,
+        email,
       });
 
       // Guardar el nuevo curso en la base de datos
@@ -57,12 +59,12 @@ module.exports = {
       }
 
       // Obtener los datos del cuerpo de la solicitud
-      const { nombrecurso, email, nivel, precio } = req.body;
+      const { curso, nivel, precio, nombre, apellido, email } = req.body;
 
       // Actualizar el curso en la base de datos
       const updatedCourse = await CourseSchema.findOneAndUpdate(
         { _id: req.course._id }, // Usar req.course._id en lugar de extraer id de req.course
-        { $set: { nombrecurso, email, nivel, precio } },
+        { $set: { curso, nivel, precio, nombre, apellido, email } },
         { new: true } // Devolver el documento actualizado
       );
 
