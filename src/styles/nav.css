@@ -7,11 +7,17 @@ nav {
   align-items: center;
   box-shadow: 0px 0px 10px 1px gray;
 }
-.portato-img-icon {
-  margin-right: 1rem;
-  width: 30px;
-  height: 30px;
+.container-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -17rem;
 }
+.portato-img-icon {
+  width: 45px;
+  height: 45px;
+}
+
 .container-img {
   box-shadow: 0px 0px 5px 1px gray;
   width: 50px;
@@ -26,6 +32,7 @@ nav {
   width: 25px;
   height: 25px;
 }
+
 nav ul {
   margin-right: 3rem;
   margin-left: 3rem;
@@ -43,6 +50,7 @@ nav ul li {
   align-items: center;
   text-decoration: none;
 }
+
 nav ul li :hover {
   background-color: aqua;
   height: 80px;
@@ -56,4 +64,91 @@ nav ul li :hover {
 nav a {
   text-decoration: none;
   color: var(--secundary-color);
+}
+button img {
+  width: 50px;
+  position: absolute;
+  right: 45px;
+  top: 15px;
+}
+
+@media screen and (max-width: 600px) {
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 1025px) {
+  nav ul {
+    position: absolute;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: var(--white);
+    top: 80px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  nav ul.open {
+    transform: translateX(0);
+  }
+
+  nav ul li {
+    width: 100%;
+    justify-content: flex-start;
+    padding-left: 1rem;
+  }
+
+  .container-img {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 2px;
+    background-color: var(--black);
+  }
+
+  /* Aquí puedes agregar los estilos específicos para pantallas con un ancho mínimo de 1025px */
+}
+
+@media screen and (min-width: 1025px) {
+  button img {
+    display: none;
+  }
+  .portato-img-icon {
+    margin-right: 1rem;
+    width: 30px;
+    height: 30px;
+  }
+  .container-logo {
+    display: flex;
+    align-items: normal;
+    margin-left: 0;
+  }
+  .portato-img-icon {
+    width: 45px;
+    height: 45px;
+  }
+  .logo-portato-nav {
+  }
+
+  /* .container-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -17rem;
+  } */
+  /* .portato-img-icon {
+    width: 45px;
+    height: 45px;
+  } */
 }

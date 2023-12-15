@@ -12,7 +12,7 @@ import SignupForm from './form';
 //import registerForm from './registerForm';
 //import LoginForm from './LoginForm';
 
-const home =()=> {
+const home = () => {
   return (
     <>
       <div className='container-prime'>
@@ -108,12 +108,8 @@ const home =()=> {
         </div>
       </div>
       <SignupForm />
-      {/*
-      <registerForm />
-      <LoginForm />
-      */}
     </>
   );
-}
+};
 
 export default home;
