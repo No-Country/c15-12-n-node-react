@@ -6,7 +6,7 @@ import Courses from '../components/courses';
 import Blog from '../components/blog';
 import About from '../components/about';
 import Review from '../components/review';
-import Contact from '../components/form';
+// import Contact from '../components/form';
 import { Routes, Route } from 'react-router-dom';
 import LoginForm from '../components/LoginForm';
 import RegisterForm from '../components/registerForm';
@@ -21,9 +21,9 @@ const App = () => {
         <Route path='/blog' element={<Blog />} />
         <Route path='/about' element={<About />} />
         <Route path='/review' element={<Review />} />
-        <Route path='/contacto' element={<Contact />} />
+        {/* <Route path='/contacto' element={<Contact />} /> */}
         <Route path='/login' element={<LoginForm />} />
-        <Route path='/registrarse' element={<RegisterForm/>} />
+        <Route path='/registrarse' element={<RegisterForm />} />
       </Routes>
       <Footer />
     </div>

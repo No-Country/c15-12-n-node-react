@@ -9,7 +9,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 100vh; */
 }
 .container-blog {
   display: grid;
@@ -24,25 +23,56 @@
 .blog-list {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 5rem;
 }
 
 .blog-list li {
   padding: 1rem;
-  width: 600px;
+  width: 350px;
   text-decoration: none;
   list-style: none;
   background-color: var(--secondary);
   box-shadow: 8px 10px 13px 1px gray;
 }
 .blog-list .img-blog {
-  width: 350px;
-  height: 300px;
+  width: 250px;
+  height: 150px;
   margin: 1rem;
 }
 .blog-list a {
   display: block;
   text-decoration: none;
   color: var(--primary-color);
+}
+@media screen and (max-width: 600px) {
+  /* Aquí puedes agregar los estilos específicos para pantallas con un ancho máximo de 600px */
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Aquí puedes agregar los estilos específicos para pantallas con un ancho entre 601px y 1024px */
+}
+
+@media screen and (min-width: 1025px) {
+  .blog-list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+  .blog-list li {
+    padding: 1rem;
+    width: 600px;
+    text-decoration: none;
+    list-style: none;
+    background-color: var(--secondary);
+    box-shadow: 8px 10px 13px 1px gray;
+  }
+  .blog-list .img-blog {
+    width: 350px;
+    height: 300px;
+    margin: 1rem;
+  }
+
+  /* Aquí puedes agregar los estilos específicos para pantallas con un ancho mínimo de 1025px */
 }

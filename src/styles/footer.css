@@ -1,11 +1,14 @@
 footer {
   color: gray;
+  display: flex;
   background-color: var(--secondary);
   bottom: 0;
   box-shadow: 1px 0px 17px 0px gray;
+  align-items: center;
+  justify-content: center;
 }
 .container-footer {
-  margin-left: 10rem;
+  width: 350px;
   padding-top: 2rem;
   padding-bottom: 1rem;
 }
@@ -58,12 +61,13 @@ footer {
 @media screen and (min-width: 1025px) {
   footer {
     color: gray;
+    display: block;
     background-color: var(--secondary);
     bottom: 0;
     box-shadow: 1px 0px 17px 0px gray;
   }
   .container-footer {
-    margin-left: 10rem;
+    width: 100%;
     padding-top: 2rem;
     padding-bottom: 1rem;
   }

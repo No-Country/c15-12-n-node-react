@@ -5,11 +5,24 @@
   --white: #fff;
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
+
 .courses-component {
   display: flex;
+  background-color: rgba(24, 26, 47, 0.1);
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+.img-background {
+  z-index: -2;
+  position: absolute;
+  opacity: 20%;
+}
+.img-background img {
+  width: 520px;
+  margin-top: -38rem;
+  margin-left: -17rem;
+  position: fixed;
 }
 .container-courses {
   width: 100%;
@@ -38,14 +51,17 @@
   text-align: center;
   margin: 20px;
 }
-
 .item-courses {
   width: 380px;
   border-radius: 5px;
   margin: 30px;
   height: 450px;
-  border: 1px solid #5d6d7e;
-  background-color: #fff;
+  background: rgba(255, 255, 255, 0.533);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(255, 255, 255, 0.803);
 }
 
 .header-courses {
@@ -73,6 +89,40 @@
   width: 200px;
   height: 30px;
   margin: 20px;
-  background-color: black;
-  color: #fff;
+  color: white;
+  background: rgba(24, 26, 47, 0.553);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(255, 255, 255, 0.803);
+}
+
+@media screen and (max-width: 600px) {
+  /* Aquí puedes agregar los estilos específicos para pantallas con un ancho máximo de 600px */
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Aquí puedes agregar los estilos específicos para pantallas con un ancho entre 601px y 1024px */
+}
+
+@media screen and (min-width: 1025px) {
+  .img-background {
+    z-index: -2;
+    position: absolute;
+    opacity: 20%;
+  }
+  .container-courses {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  .img-background img {
+    width: 100%;
+    position: relative;
+    margin-top: 2rem;
+    margin-left: 0rem;
+  }
+  /* Aquí puedes agregar los estilos específicos para pantallas con un ancho mínimo de 1025px */
 }

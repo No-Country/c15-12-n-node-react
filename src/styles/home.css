@@ -1,15 +1,19 @@
+* {
+  text-align: center;
+}
 .container-prime {
-  height: 90vh;
-  width: 100%;
+  height: 100vh;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   background: rgba(24, 26, 47, 255);
   color: white;
   box-shadow: 0px 32px 18px -25px gray;
 }
 .container-home-search {
-  width: 50%;
-  margin-left: 8rem;
-  margin-top: 15%;
+  margin-left: 5rem;
+  margin-top: -20%;
 }
 .container-home-search h1 {
   font-size: 3rem;
@@ -23,7 +27,7 @@
 .btn-learnMore {
   position: relative;
   display: inline-block;
-  margin-top: 1rem;
+  margin-top: 5rem;
   color: var(--primary-color);
   font-size: 1.4rem;
   font-weight: 700;
@@ -77,11 +81,12 @@
   transform: translate(-50%, -50%);
 }
 
-.img-home-container {
+/* .img-home-container {
   width: 50%;
-}
+} */
 .img-home-container img {
   width: 400px;
+  margin-top: -10rem;
   margin-left: -21rem;
   opacity: 10%;
 }
@@ -92,7 +97,6 @@
   text-align: center;
   width: 100%;
   height: 100vh;
-  display: flex;
   flex-direction: column;
 }
 .container-img-aboutUs {
@@ -113,14 +117,15 @@
 }
 .container-morePopular {
   display: flex;
-  height: 90vh;
+  height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 5rem;
+  margin-top: 7rem;
 }
 .container-morePopular ul {
-  margin-top: 10rem;
+  margin-top: 3rem;
   display: grid;
   list-style: none;
   gap: 3rem;
@@ -171,7 +176,7 @@
   grid-template-columns: repeat(1, 1fr);
 }
 .container-reviews ul li {
-  width: 400px;
+  width: 350px;
   padding: 0.5rem;
   display: flex;
   align-items: center;
@@ -231,7 +236,7 @@
   .container-home-search {
     width: 50%;
     margin-left: 8rem;
-    margin-top: 15%;
+    margin-top: 5%;
   }
   .container-home-search h1 {
     font-size: 4rem;
@@ -306,6 +311,7 @@
     width: 100%;
     margin-left: 0;
     opacity: 100%;
+    margin-top: 0;
   }
   .container-aboutUs {
     display: flex;
@@ -432,6 +438,9 @@
     width: 150px;
     margin-top: 2rem;
     margin-bottom: 2rem;
+  }
+  .img-home-container {
+    width: 50%;
   }
 
   /* Aquí puedes agregar los estilos específicos para pantallas con un ancho mínimo de 1025px */

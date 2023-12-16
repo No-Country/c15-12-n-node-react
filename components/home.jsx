@@ -9,8 +9,7 @@ import comillas from '../src/assets/images_project/Nueva carpeta/comillas.png';
 import zigzag from '../src/assets/images_project/Nueva carpeta/zigzag.png';
 import separator from '../src/assets/images_project/Nueva carpeta/separator.svg';
 import SignupForm from './form';
-//import registerForm from './registerForm';
-//import LoginForm from './LoginForm';
+import { Link } from 'react-router-dom';
 
 const home = () => {
   return (
@@ -23,12 +22,12 @@ const home = () => {
             <br />
             Lorem ipsum dolor sit amet consectetur.
           </p>
-          <a href='/' className='btn-learnMore'>
+          <Link to='/about' className='btn-learnMore'>
             <span className='text text-1'>Saber Mas</span>
             <span className='text text-2' aria-hidden='true'>
               Saber Mas
             </span>
-          </a>
+          </Link>
         </div>
         <div className='img-home-container'>
           <img className='img-home-portato' src={portatoimg} alt='' />
@@ -107,7 +106,9 @@ const home = () => {
           </ul>
         </div>
       </div>
-      <SignupForm />
+      <div id='contact'>
+        <SignupForm />
+      </div>
     </>
   );
 };

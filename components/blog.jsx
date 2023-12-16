@@ -47,7 +47,7 @@ const blog = () => {
                 <p>{item.summary}</p>
                 <br />
                 <a href={item.url} target='blank'>
-                  <strong>{item.url}</strong>
+                  <strong>Ver mas...</strong>
                 </a>
               </li>
             ))}

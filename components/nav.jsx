@@ -3,7 +3,8 @@ import portatoIcon from '../src/assets/images_project/Nueva carpeta/guitarra.png
 import userIcon from '../src/assets/images_project/Nueva carpeta/usuario.png';
 import openMenuIcon from '../src/assets/images_project/barra-de-menus.png';
 import closeMenuIcon from '../src/assets/images_project/borrar.png';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import ModalLoging from '../components/modalLoginRegister';
 import { useState } from 'react';
 
@@ -35,19 +36,21 @@ const Nav = () => {
 
       <ul className={isNavOpen ? 'open' : ''}>
         <li>
-          <Link to='/'>Inicio</Link>
+          <NavLink to='/'>Inicio</NavLink>
         </li>
         <li>
-          <Link to='/about'>Nosotros</Link>
+          <NavLink to='/about'>Nosotros</NavLink>
         </li>
         <li>
-          <Link to='/courses'>Cursos</Link>
+          <NavLink to='/courses'>Cursos</NavLink>
         </li>
         <li>
-          <Link to='/blog'>Blog</Link>
+          <NavLink to='/blog'>Blog</NavLink>
         </li>
         <li>
-          <Link to='/contacto'>Contacto</Link>
+          <Link smooth to='/#contact'>
+            Contacto
+          </Link>
         </li>
       </ul>
 
