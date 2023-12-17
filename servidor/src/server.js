@@ -66,4 +66,19 @@ app.use(express.static(path.resolve(__dirname, './dist')));
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, './dist', 'index.html'));
 });
-app.listen(3001, () => console.log('Server running on port 3001'));
+
+const {
+  CreateCourse,
+  GetAllCourses,
+  FindCourse,
+  UpdateCourse,
+  DeleteCourse,
+} = require("../controller/course.controllers.js");
+
+app.post("/registerCourse", CreateCourse);
+app.get("/courses", GetAllCourses);
+app.get("/courses/:id", FindCourse);
+app.put("/courses/:id", UpdateCourse);
+app.delete("/courses/:id", DeleteCourse);
+
+app.listen(3000, () => console.log('Server running on port 3000'));
