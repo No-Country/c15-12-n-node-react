@@ -21,7 +21,7 @@ const LoginForm = () => {
   
     const handleSubmit = async (e) => {
       e.preventDefault();
-      const response = await fetch('/login', {
+      const response = await fetch('http://localhost:3000/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ const LoginForm = () => {
   
     return (
       <div className='form-container-prime'>
-        <h1>Iniciar Sesion</h1>
+        <h1>INICIAR SESION</h1>
         <img className='separator-img' src={separator} alt='' />
         <div className='container-form'>
           <form className='form' onSubmit={handleSubmit}>

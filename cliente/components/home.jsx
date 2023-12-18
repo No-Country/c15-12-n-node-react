@@ -9,26 +9,25 @@ import comillas from '../src/assets/images_project/Nueva carpeta/comillas.png';
 import zigzag from '../src/assets/images_project/Nueva carpeta/zigzag.png';
 import separator from '../src/assets/images_project/Nueva carpeta/separator.svg';
 import SignupForm from './form';
-//import registerForm from './registerForm';
-//import LoginForm from './LoginForm';
+import { Link } from 'react-router-dom';
 
-const home =()=> {
+const home = () => {
   return (
     <>
       <div className='container-prime'>
         <div className='container-home-search'>
           <h1>La Mejor Enseñanza Esta Aquì</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            <br />
-            Lorem ipsum dolor sit amet consectetur.
+            Impulsamos el amor por la música en todas las edades. Ofrecemos
+            educación musical de alta calidad, fomentando la creatividad y el
+            logro personal.
           </p>
-          <a href='/' className='btn-learnMore'>
+          <Link to='/about' className='btn-learnMore'>
             <span className='text text-1'>Saber Mas</span>
             <span className='text text-2' aria-hidden='true'>
               Saber Mas
             </span>
-          </a>
+          </Link>
         </div>
         <div className='img-home-container'>
           <img className='img-home-portato' src={portatoimg} alt='' />
@@ -41,10 +40,12 @@ const home =()=> {
           <img className='img-aboutUs' src={teacher} alt='' />
         </div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti
-          numquam natus vitae maiores, totam reiciendis esse consectetur laborum
-          velit, sunt, dolorum repellat hic magnam distinctio incidunt maxime
-          ullam deserunt obcaecati?
+          Ofrecemos una amplia gama de cursos, desde lecciones individuales de
+          instrumentos hasta clases de teoría musical y conjuntos de música de
+          cámara. Nuestros profesores altamente calificados y apasionados por la
+          música están comprometidos a ayudar a cada estudiante a alcanzar su
+          máximo potencial musical. Únete a Nosotros Si estás listo para
+          embarcarte en un viaje musical.
         </p>
       </div>
 
@@ -107,13 +108,11 @@ const home =()=> {
           </ul>
         </div>
       </div>
-      <SignupForm />
-      {/*
-      <registerForm />
-      <LoginForm />
-      */}
+      <div id='contact'>
+        <SignupForm />
+      </div>
     </>
   );
-}
+};
 
 export default home;

@@ -1,34 +1,27 @@
-:root {
-  --primary-color: #12c2b9;
-  --secondary: #dbfffe;
-  --black: #141414;
-  --white: #fff;
-  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-}
-
 .form-container-prime {
   color: var(--primary-color);
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 20rem;
 }
 .container-form {
-  height: 80vh;
-  display: flex;
-  flex-direction: row;
-  gap: 10rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3rem;
   justify-content: center;
-  align-items: center;
+  place-items: center;
+  margin-bottom: 5rem;
 }
 .img-email {
   border-radius: 5%;
   box-shadow: 0px 2px 15px 0px gray;
-  width: 450px;
+  width: 350px;
+  height: 350px;
 }
 .form {
   border-radius: 5%;
   box-shadow: 0px 2px 15px 0px gray;
-  width: 450px;
-  height: 450px;
+  width: 350px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,7 +36,7 @@ textarea {
   height: 30%;
 }
 .submit-button {
-  background-color: #4CAF50; /* Green */
+  background-color: #4caf50; /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -53,4 +46,66 @@ textarea {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  /* Aquí puedes agregar los estilos específicos para pantallas con un ancho máximo de 600px */
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Aquí puedes agregar los estilos específicos para pantallas con un ancho entre 601px y 1024px */
+}
+
+@media screen and (min-width: 1025px) {
+  .form-container-prime {
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .container-form {
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .img-email {
+    border-radius: 5%;
+    box-shadow: 0px 2px 15px 0px gray;
+    width: 450px;
+    height: 450px;
+  }
+  .form {
+    border-radius: 5%;
+    box-shadow: 0px 2px 15px 0px gray;
+    width: 450px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  input {
+    width: 90%;
+    height: 10%;
+  }
+  textarea {
+    width: 90%;
+    height: 30%;
+  }
+  .submit-button {
+    background-color: #4caf50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  /* Aquí puedes agregar los estilos específicos para pantallas con un ancho mínimo de 1025px */
 }

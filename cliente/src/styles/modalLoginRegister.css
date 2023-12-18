@@ -1,0 +1,63 @@
+.btn-modal-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.438);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  z-index: 1;
+}
+.btn-modal-container ul {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+.btn-modal-container ul li {
+  width: 250px;
+}
+#btn-login,
+#btn-register {
+  width: 250px;
+  height: 90px;
+  /* Define el tamaño inicial de la tarjeta */
+  transform: scale(0.8);
+  /* Asegura una transición suave */
+  transition: transform 0.3s ease;
+  background: rgba(21, 21, 21, 0.533);
+  border-radius: 16px;
+  box-shadow: 7px 9px 20px 1px gray;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgb(4, 4, 4);
+}
+
+#btn-register:hover {
+  background-color: none;
+  transform: scale(1);
+}
+#btn-login:hover {
+  transform: scale(1);
+}
+
+.btn-modal-container img {
+  z-index: 20;
+  width: 100px;
+}
+.btn-modal {
+  color: white;
+  font-size: 15px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 70px;
+  gap: 1rem;
+  box-shadow: 0px 0px 10px 2px white;
+}

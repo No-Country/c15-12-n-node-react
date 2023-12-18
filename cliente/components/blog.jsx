@@ -34,20 +34,24 @@ const blog = () => {
             {data.slice(1, 5).map((item) => (
               <li key={uuidv4()}>
                 <h2>
-                  <strong> {item.title.toUpperCase()} </strong>{' '}
+                  <strong>
+                    {' '}
+                    {item.title.toUpperCase().substring(0, 50)}...{' '}
+                  </strong>{' '}
                 </h2>
 
                 <br />
                 <img
+                  id='img-blog'
                   className='img-blog'
                   src={item.banner_image ? item.banner_image : news}
                   alt='noticias'
                 />
                 <br />
-                <p>{item.summary}</p>
+                <p>{item.summary.substring(0, 200)}...</p>
                 <br />
                 <a href={item.url} target='blank'>
-                  <strong>{item.url}</strong>
+                  <strong>Ver mas...</strong>
                 </a>
               </li>
             ))}

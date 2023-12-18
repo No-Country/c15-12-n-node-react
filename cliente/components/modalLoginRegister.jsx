@@ -9,7 +9,7 @@ const modalLogin = ({ isOpen, closeModal }) => {
           <Link
             id='btn-login'
             className='btn-modal register'
-            to='/register'
+            to='/registrarse'
             onClick={closeModal}
           >
             <strong>REGISTRARSE</strong>
