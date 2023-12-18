@@ -40,6 +40,7 @@ nav ul {
   display: flex;
   justify-content: space-between;
   text-align: center;
+  z-index: 20;
 }
 
 nav ul li {
@@ -71,6 +72,16 @@ button img {
   right: 45px;
   top: 15px;
 }
+.arrowUp {
+  position: fixed;
+  right: 2rem;
+  top: 51rem;
+  z-index: 10;
+  opacity: 20%;
+}
+.arrowUp:hover {
+  opacity: 100%;
+}
 
 @media screen and (max-width: 600px) {
 }
@@ -95,6 +106,7 @@ button img {
   }
 
   nav ul li {
+    display: block;
     width: 100%;
     justify-content: flex-start;
     padding-left: 1rem;
@@ -138,17 +150,4 @@ button img {
     width: 45px;
     height: 45px;
   }
-  .logo-portato-nav {
-  }
-
-  /* .container-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: -17rem;
-  } */
-  /* .portato-img-icon {
-    width: 45px;
-    height: 45px;
-  } */
 }

@@ -18,9 +18,9 @@ const home = () => {
         <div className='container-home-search'>
           <h1>La Mejor Enseñanza Esta Aquì</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            <br />
-            Lorem ipsum dolor sit amet consectetur.
+            Impulsamos el amor por la música en todas las edades. Ofrecemos
+            educación musical de alta calidad, fomentando la creatividad y el
+            logro personal.
           </p>
           <Link to='/about' className='btn-learnMore'>
             <span className='text text-1'>Saber Mas</span>
@@ -40,10 +40,12 @@ const home = () => {
           <img className='img-aboutUs' src={teacher} alt='' />
         </div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti
-          numquam natus vitae maiores, totam reiciendis esse consectetur laborum
-          velit, sunt, dolorum repellat hic magnam distinctio incidunt maxime
-          ullam deserunt obcaecati?
+          Ofrecemos una amplia gama de cursos, desde lecciones individuales de
+          instrumentos hasta clases de teoría musical y conjuntos de música de
+          cámara. Nuestros profesores altamente calificados y apasionados por la
+          música están comprometidos a ayudar a cada estudiante a alcanzar su
+          máximo potencial musical. Únete a Nosotros Si estás listo para
+          embarcarte en un viaje musical.
         </p>
       </div>
 

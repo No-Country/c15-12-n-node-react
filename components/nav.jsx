@@ -7,6 +7,7 @@ import { NavLink } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 import ModalLoging from '../components/modalLoginRegister';
 import { useState } from 'react';
+import arrowUp from '../src/assets/images_project/Nueva carpeta/flecha-hacia-arriba.png';
 
 const Nav = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -34,26 +35,38 @@ const Nav = () => {
         <h5 className='logo-portato-nav'>AC Portato</h5>
       </div>
 
-      <ul className={isNavOpen ? 'open' : ''}>
+      <ul id='principal' className={isNavOpen ? 'open' : ''}>
         <li>
-          <NavLink to='/'>Inicio</NavLink>
+          <NavLink onClick={toggleNav} to='/'>
+            Inicio
+          </NavLink>
         </li>
         <li>
-          <NavLink to='/about'>Nosotros</NavLink>
+          <NavLink onClick={toggleNav} to='/about'>
+            Nosotros
+          </NavLink>
         </li>
         <li>
-          <NavLink to='/courses'>Cursos</NavLink>
+          <NavLink onClick={toggleNav} to='/courses'>
+            Cursos
+          </NavLink>
         </li>
         <li>
-          <NavLink to='/blog'>Blog</NavLink>
+          <NavLink onClick={toggleNav} to='/blog'>
+            Blog
+          </NavLink>
         </li>
         <li>
-          <Link smooth to='/#contact'>
+          <Link onClick={toggleNav} smooth to='/#contact'>
             Contacto
           </Link>
         </li>
       </ul>
-
+      <button>
+        <Link smooth to='#principal'>
+          <img className='arrowUp' src={arrowUp} alt='' />
+        </Link>
+      </button>
       <div className='container-img' onClick={() => setIsModalOpen(true)}>
         <img className='user-img' src={userIcon} alt='user-img' />
       </div>

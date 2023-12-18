@@ -1,13 +1,9 @@
 import '../src/styles/courses.css';
 import separator from '../src/assets/images_project/Nueva carpeta/separator.svg';
-import portato from '../src/assets/images_project/Nueva carpeta/portatoimg.png';
 
 const courses = () => {
   return (
     <div className='courses-component'>
-      <div className='img-background'>
-        <img src={portato} alt='' />
-      </div>
       <h1 className='title-courses'> SELECT THE PLAN</h1>
       <img className='separator-img' src={separator} alt='' />
       <div className='container-courses'>
@@ -30,7 +26,7 @@ const courses = () => {
             <button className='btn'>Select Plan</button>
           </div>
         </div>
-        <div className='item-courses'>
+        <div className='item-courses standar'>
           <h1 className='title-card'>Standard</h1>
           <header className='header-courses'>
             <h1 className='header-title'>$50/Mo</h1>

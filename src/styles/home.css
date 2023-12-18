@@ -81,9 +81,6 @@
   transform: translate(-50%, -50%);
 }
 
-/* .img-home-container {
-  width: 50%;
-} */
 .img-home-container img {
   width: 400px;
   margin-top: -10rem;
@@ -102,14 +99,19 @@
 .container-img-aboutUs {
   width: 400px;
   height: 350px;
-  background-color: var(--secondary);
-  box-shadow: 7px 9px 20px 1px gray;
   margin-bottom: 5rem;
+  background: rgba(18, 194, 185, 0.4);
+  border-radius: 16px;
+  box-shadow: 7px 9px 20px 1px gray;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(18, 194, 185, 0.4);
 }
 .img-aboutUs {
   width: 350px;
 }
 .container-aboutUs p {
+  text-align: center;
   width: 20rem;
   line-height: 1.5rem;
   box-shadow: 1px 18px 10px -19px gray;
@@ -136,9 +138,12 @@
   align-items: center;
   width: 380px;
   height: 230px;
-  background-color: var(--secondary);
-  border: 1px solid var(--primary-color);
-  box-shadow: 11px 12px 19px -1px gray;
+  background: rgba(18, 194, 185, 0.4);
+  border-radius: 16px;
+  box-shadow: 7px 9px 20px 1px gray;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(18, 194, 185, 0.4);
 }
 .container-morePopular li :hover {
   transform: scale(1.5);
@@ -183,8 +188,12 @@
   flex-direction: column;
   margin: 1rem;
   gap: 2rem;
-  border-radius: 20px;
-  box-shadow: 0px 5px 20px 1px gray;
+  background: rgba(255, 255, 255, 0.533);
+  border-radius: 16px;
+  box-shadow: 7px 9px 20px 1px gray;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(18, 194, 185, 0.4);
 }
 .container-cards-img {
   display: flex;
@@ -322,11 +331,11 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+    margin-top: 5rem;
   }
   .container-img-aboutUs {
     width: 400px;
     height: 350px;
-    background-color: var(--secondary);
     box-shadow: 7px 9px 20px 1px gray;
     margin-bottom: 5rem;
   }
@@ -334,6 +343,8 @@
     width: 350px;
   }
   .container-aboutUs p {
+    font-size: 20px;
+    line-height: 2rem;
     width: 50rem;
     box-shadow: 1px 18px 10px -19px gray;
     margin-bottom: 1rem;
@@ -360,9 +371,9 @@
     align-items: center;
     width: 380px;
     height: 230px;
-    background-color: var(--secondary);
+    /* background-color: var(--secondary);
     border: 1px solid var(--primary-color);
-    box-shadow: 11px 12px 19px -1px gray;
+    box-shadow: 11px 12px 19px -1px gray; */
   }
   .container-morePopular li :hover {
     transform: scale(1.5);
