@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../src/styles/form.css';
 import separator from '../src/assets/images_project/Nueva carpeta/separator.svg';
 //import emails from '../src/assets/images_project/Nueva carpeta/form-email.png';
@@ -8,7 +9,7 @@ const registerForm = () => {
   const [email, setEmail] = useState('');
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [password, setPassword] = useState('');
-
+  const navegate = useNavigate();
   const handleChange = (e) => {
     const { name, value } = e.target;
     switch (name) {
@@ -36,6 +37,7 @@ const registerForm = () => {
       // Aquí puedes manejar los datos de la respuesta como necesites
       console.log(data);
       alert('Registro realizado con éxito');
+      navegate('/login');
     } else {
       alert('Registro Incorrecto');
     }
