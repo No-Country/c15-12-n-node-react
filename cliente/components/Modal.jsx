@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../src/styles/modal.css';
+import closeImg from '../src/assets/images_project/borrar.png';
 
 const Modal = ({ onClose }) => {
   const [formData, setFormData] = useState({
@@ -49,48 +50,83 @@ const Modal = ({ onClose }) => {
       <div className='modal-content'>
         <h2 className='modal-title'>Plan Selection Course</h2>
         <form onSubmit={handleSubmit}>
-        <label>Curso</label>
-          <input type="text" name="curso" placeholder='Curso' value={formData.curso} onChange={handleChange} />
+          <label>Curso</label>
+          <input
+            type='text'
+            name='curso'
+            placeholder='Curso'
+            value={formData.curso}
+            onChange={handleChange}
+          />
           <label>Nivel</label>
-          <input type="text" name="nivel" placeholder='Nivel' value={formData.nivel} onChange={handleChange} />
+          <input
+            type='text'
+            name='nivel'
+            placeholder='Nivel'
+            value={formData.nivel}
+            onChange={handleChange}
+          />
           <div>
-      <label>Precio</label>
-      <div>
-        <input
-          type="text"
-          name="precio"
-          placeholder="Precio"
-          value={formData.precio}
-          onChange={handleChange}
-        />
-        <select name="moneda" value={formData.moneda} onChange={handleChange}>
-          <option value="USD">USD</option>
-          <option value="EUR">EUR</option>
-          <option value="GBP">GBP</option>
-          {/* Agrega más opciones según sea necesario */}
-        </select>
-      </div>
-      <p>{`Precio: ${formData.precio} ${formData.moneda}`}</p>
-    </div>
+            <label>Precio</label>
+            <div>
+              <input
+                type='text'
+                name='precio'
+                placeholder='Precio'
+                value={formData.precio}
+                onChange={handleChange}
+              />
+              <select
+                name='moneda'
+                value={formData.moneda}
+                onChange={handleChange}
+              >
+                <option value='USD'>USD</option>
+                <option value='EUR'>EUR</option>
+                <option value='GBP'>GBP</option>
+                {/* Agrega más opciones según sea necesario */}
+              </select>
+            </div>
+            <p>{`Precio: ${formData.precio} ${formData.moneda}`}</p>
+          </div>
           <label>Nombre</label>
-          <input type="text" name="nombre" placeholder='Nombre' value={formData.nombre} onChange={handleChange} />
+          <input
+            type='text'
+            name='nombre'
+            placeholder='Nombre'
+            value={formData.nombre}
+            onChange={handleChange}
+          />
           <label>Apellido</label>
-          <input type="text" name="apellido" placeholder='Apellido' value={formData.apellido} onChange={handleChange} />
+          <input
+            type='text'
+            name='apellido'
+            placeholder='Apellido'
+            value={formData.apellido}
+            onChange={handleChange}
+          />
           <label>Email</label>
-          <input type="text" name="email" placeholder='Email' value={formData.email} onChange={handleChange} />
-        
-          <button type="submit" className='btn-modal'>
-            Submit
+          <input
+            type='text'
+            name='email'
+            placeholder='Email'
+            value={formData.email}
+            onChange={handleChange}
+          />
+
+          <button type='submit' className='btn-modal'>
+            <strong>ENVIAR</strong>
           </button>
         </form>
-        <button className='btn-modal' onClick={onClose}>
-          Close
-        </button>
+        <img
+          className='btn-close-modal'
+          onClick={onClose}
+          src={closeImg}
+          alt=''
+        />
       </div>
     </div>
   );
 };
-
-
 
 export default Modal;

@@ -1,3 +1,10 @@
+:root {
+  --primary-color: #12c2b9;
+  --secondary: #dbfffe;
+  --black: #141414;
+  --white: #fff;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -11,10 +18,12 @@
 }
 
 .modal-content {
+  width: 22rem;
+  height: 42rem;
   background-color: white;
   padding: 20px;
   border-radius: 8px;
-  margin-top: 180px;
+  margin-top: -180px;
 }
 
 .modal-title {
@@ -31,7 +40,7 @@ form {
 label {
   font-size: 1rem;
   margin-bottom: 5px;
-  color: #000; 
+  color: #000;
   font-weight: bold;
   display: block;
 }
@@ -44,17 +53,29 @@ input {
 }
 
 input:focus {
-  border-color: #007BFF; 
+  border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  outline: none; 
+  outline: none;
 }
 
 .btn-modal {
-  background-color: #007bff; 
-  color: white;
-  padding: 10px 15px;
-  border: none;
+  background-color: var(--secondary);
+  color: black;
+  padding: 20px 80px;
+  box-shadow: 9px 5px 16px -6px gray;
   border-radius: 4px;
   cursor: pointer;
   margin-top: 10px;
+  margin-left: 5rem;
+  transform: scale(0.8);
+}
+.btn-modal:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: scale(1);
+}
+.btn-close-modal {
+  width: 53px;
+  position: relative;
+  top: -45rem;
 }
