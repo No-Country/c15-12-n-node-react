@@ -1,7 +1,20 @@
 import '../src/styles/courses.css';
 import separator from '../src/assets/images_project/Nueva carpeta/separator.svg';
+import Modal from './modal';
+import { useState } from 'react';
 
 const courses = () => {
+  const [isModalOpen, setIsModalOpen] = useState([false, false, false]);
+  const openModal = (index) => {
+    let newIsModalOpen = [...isModalOpen];
+    newIsModalOpen[index] = true;
+    setIsModalOpen(newIsModalOpen);
+  };
+  const closeModal = (index) => {
+    let newIsmodalOpen = [...isModalOpen];
+    newIsmodalOpen[index] = false;
+    setIsModalOpen(newIsmodalOpen);
+  };
   return (
     <div className='courses-component'>
       <h1 className='title-courses'> SELECT THE PLAN</h1>
@@ -23,8 +36,11 @@ const courses = () => {
           </div>
           <hr />
           <div className='container-botton'>
-            <button className='btn'>Select Plan</button>
+            <button onClick={() => openModal(0)} className='btn'>
+              Select Plan
+            </button>
           </div>
+          {isModalOpen[0] && <Modal onClose={() => closeModal(0)} />}
         </div>
         <div className='item-courses standar'>
           <h1 className='title-card'>Standard</h1>
@@ -42,8 +58,11 @@ const courses = () => {
           </div>
           <hr />
           <div className='container-botton'>
-            <button className='btn'>Select Plan</button>
+            <button onClick={() => openModal(1)} className='btn'>
+              Select Plan
+            </button>
           </div>
+          {isModalOpen[1] && <Modal onClose={() => closeModal(1)} />}
         </div>
         <div className='item-courses'>
           <h1 className='title-card'>Premium</h1>
@@ -61,8 +80,11 @@ const courses = () => {
           </div>
           <hr />
           <div className='container-botton'>
-            <button className='btn'>Select Plan</button>
+            <button onClick={() => openModal(2)} className='btn'>
+              Select Plan
+            </button>
           </div>
+          {isModalOpen[2] && <Modal onClose={() => closeModal(2)} />}
         </div>
       </div>
     </div>
