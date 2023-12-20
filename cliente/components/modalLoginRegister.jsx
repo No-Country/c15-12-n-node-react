@@ -6,22 +6,12 @@ const modalLogin = ({ isOpen, closeModal }) => {
     <div className='btn-modal-container'>
       <ul>
         <li>
-          <Link
-            id='btn-login'
-            className='btn-modal register'
-            to='/registrarse'
-            onClick={closeModal}
-          >
+          <Link id='btn-login' to='/registrarse' onClick={closeModal}>
             <strong>REGISTRARSE</strong>
           </Link>
         </li>
         <li>
-          <Link
-            id='btn-register'
-            className='btn-modal login'
-            to='/Login'
-            onClick={closeModal}
-          >
+          <Link id='btn-register' to='/Login' onClick={closeModal}>
             <strong>INICIAR SESION</strong>
           </Link>
         </li>

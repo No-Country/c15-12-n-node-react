@@ -35,7 +35,7 @@ const Nav = () => {
         <h5 className='logo-portato-nav'>AC Portato</h5>
       </div>
 
-      <ul id='principal' className={isNavOpen ? 'open' : ''}>
+      <ul id='principal nav-li' className={isNavOpen ? 'open' : ''}>
         <li>
           <NavLink onClick={toggleNav} to='/'>
             Inicio
