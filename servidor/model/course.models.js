@@ -48,7 +48,7 @@ const CourseSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-    email: {
+  email: {
     type: String,
     required: true,
     unique: true,
@@ -80,5 +80,6 @@ CourseSchema.pre("validate", function (next) {
 });
 
 module.exports = mongoose.model("course", CourseSchema);
+
 
 
