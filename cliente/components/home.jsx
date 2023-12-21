@@ -12,8 +12,14 @@ import zigzag from '../src/assets/images_project/Nueva carpeta/zigzag.png';
 import separator from '../src/assets/images_project/Nueva carpeta/separator.svg';
 import SignupForm from './form';
 import { Link } from 'react-router-dom';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const home = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <>
       <div className='container-prime'>
@@ -39,9 +45,14 @@ const home = () => {
         <h1 className='titulo'>SOBRE NOSOTROS</h1>
         <img className='separator-img' src={separator} alt='' />
         <div className='container-img-aboutUs'>
-          <img className='img-aboutUs' src={teacher} alt='' />
+          <img
+            data-aos='zoom-in-up'
+            className='img-aboutUs'
+            src={teacher}
+            alt=''
+          />
         </div>
-        <p>
+        <p data-aos='zoom-in-up'>
           Ofrecemos una amplia gama de cursos, desde lecciones individuales de
           instrumentos hasta clases de teoría musical y conjuntos de música de
           cámara. Nuestros profesores altamente calificados y apasionados por la
@@ -55,15 +66,15 @@ const home = () => {
         <h1 className='titulo'>MAS POPULARES</h1>
         <img className='separator-img' src={separator} alt='' />
         <ul>
-          <li>
+          <li data-aos='zoom-in-up'>
             <img src={violin} alt='' />
             <p>Violin</p>
           </li>
-          <li>
+          <li data-aos='zoom-in-up'>
             <img src={violonchelo} alt='' />
             <p>Violonchelo</p>
           </li>
-          <li>
+          <li data-aos='zoom-in-up'>
             <img src={contrabajo} alt='' />
             <p>Contrabajo</p>
           </li>
@@ -74,7 +85,11 @@ const home = () => {
         <img className='separator-img' src={separator} alt='' />
         <div className='container-reviews'>
           <ul>
-            <li>
+            <li
+              data-aos='fade-right'
+              data-aos-offset='300'
+              data-aos-easing='ease-in-sine'
+            >
               <p>
                 Recuerdo que cuando ingrese no sabia nada de instrumentos de
                 cuerda y gracias a la profesora ahora puedo tocar el violin.
@@ -85,7 +100,11 @@ const home = () => {
                 <img className='backtips-img' src={comillas} alt='' />
               </div>
             </li>
-            <li>
+            <li
+              data-aos='fade-down'
+              data-aos-easing='linear'
+              data-aos-duration='1500'
+            >
               <p>
                 Excelencia educativa recomendado 100%, la profesora es un 10,
                 muchas gracias por su paciencia y amabilidad
@@ -96,7 +115,11 @@ const home = () => {
                 <img className='backtips-img' src={comillas} alt='' />
               </div>
             </li>
-            <li>
+            <li
+              data-aos='fade-right'
+              data-aos-offset='300'
+              data-aos-easing='ease-in-sine'
+            >
               <p>
                 Llegue a este lugar a traves de un amigo que toca muy bien el
                 violonchelo le pregunte donde aprendio y me recomendo, ahora

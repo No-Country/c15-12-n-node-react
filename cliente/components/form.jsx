@@ -2,8 +2,13 @@ import { useState } from 'react';
 import '../src/styles/form.css';
 import separator from '../src/assets/images_project/Nueva carpeta/separator.svg';
 import emails from '../src/assets/images_project/Nueva carpeta/form-email.png';
-
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 const Form = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [description, setDescription] = useState('');
@@ -30,22 +35,21 @@ const Form = () => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ name, email, description}),
-    
+      body: JSON.stringify({ name, email, description }),
     });
-    
+
     if (response.ok) {
       const data = await response.json();
       // Aquí puedes manejar los datos de la respuesta como necesites
       console.log(data);
       alert('Contacto enviado Con éxito');
     } else {
-      alert('Contacto enviado Sin éxito')
+      alert('Contacto enviado Sin éxito');
     }
   };
 
   return (
-    <div className='form-container-prime'>
+    <div className='form-container-prime' data-aos='flip-up'>
       <h1>CONTACTO</h1>
       <img className='separator-img' src={separator} alt='' />
       <div className='container-form'>
@@ -75,7 +79,9 @@ const Form = () => {
             onChange={handleChange}
           />
           <br />
-          <button type='submit' className='submit-button'>Contactar</button>
+          <button type='submit' className='submit-button'>
+            Contactar
+          </button>
         </form>
       </div>
     </div>
