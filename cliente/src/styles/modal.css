@@ -16,22 +16,17 @@
   justify-content: center;
   align-items: flex-start;
 }
-.grid-courses {
-  display: grid;
-  width: 100%;
-  grid-template-rows: repeat(1fr, 1);
-}
 
 .modal-content {
   position: absolute;
   display: flex;
   flex-direction: column;
-  width: 34rem;
-  height: 25rem;
+  width: 20rem;
+  height: 539px;
   background-color: white;
-  padding: 20px;
+  padding: 16px;
   border-radius: 8px;
-  margin-top: 30px;
+  margin-top: -6px;
   align-items: center;
   justify-content: center;
 }
@@ -49,8 +44,7 @@ form {
 }
 .formm {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(1, 1fr);
 }
 
 label {
@@ -83,9 +77,10 @@ input:focus {
   box-shadow: 9px 5px 16px -6px gray;
   border-radius: 4px;
   cursor: pointer;
-  margin-top: 10px;
-  margin-left: 8rem;
+  bottom: -16px;
+  left: 1.7rem;
   transform: scale(0.8);
+  position: absolute;
 }
 .btn-modal:hover {
   background-color: var(--primary-color);
@@ -95,5 +90,108 @@ input:focus {
 .btn-close-modal {
   width: 68px;
   position: relative;
-  top: -28rem;
+  top: -35rem;
+}
+
+@media screen and (max-width: 600px) {
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+}
+
+@media screen and (min-width: 1025px) {
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .grid-courses {
+    display: grid;
+    width: 100%;
+    grid-template-rows: repeat(1fr, 1);
+  }
+
+  .modal-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 34rem;
+    height: 25rem;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-title {
+    font-size: 1.5rem;
+    margin-top: 56px;
+    padding-bottom: 1rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .formm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    direction: rtl;
+    gap: 1rem;
+  }
+
+  label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #000;
+    font-weight: bold;
+    display: block;
+  }
+
+  input {
+    width: 200px;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+
+  .btn-modal {
+    background-color: var(--secondary);
+    color: black;
+    width: 294px;
+    padding: 20px 80px;
+    box-shadow: 9px 5px 16px -6px gray;
+    border-radius: 4px;
+    cursor: pointer;
+    bottom: 16px;
+    left: 9rem;
+    transform: scale(0.8);
+    position: absolute;
+  }
+  .btn-modal:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: scale(1);
+  }
+  .btn-close-modal {
+    width: 68px;
+    position: relative;
+    top: -24rem;
+  }
 }

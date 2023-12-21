@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../src/styles/form.css';
+import '../src/styles/formRegisterLogin.css';
 import separator from '../src/assets/images_project/Nueva carpeta/separator.svg';
 //import emails from '../src/assets/images_project/Nueva carpeta/form-email.png';
 
@@ -44,7 +44,7 @@ const registerForm = () => {
   };
 
   return (
-    <div className='form-container-prime'>
+    <div className='form-container-prime2'>
       <h1>REGISTRARSE</h1>
       <img className='separator-img' src={separator} alt='' />
       <div className='container-form'>

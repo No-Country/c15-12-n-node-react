@@ -5,6 +5,8 @@ import violin from '../src/assets/images_project/Nueva carpeta/violin.png';
 import violonchelo from '../src/assets/images_project/Nueva carpeta/violonchelo.png';
 import contrabajo from '../src/assets/images_project/Nueva carpeta/contrabajo.png';
 import woman from '../src/assets/images_project/Nueva carpeta/img-woman.jpg';
+import woman2 from '../src/assets/images_project/Nueva carpeta/img-woman-2.jpg';
+import woman3 from '../src/assets/images_project/Nueva carpeta/img-woman-3.jpg';
 import comillas from '../src/assets/images_project/Nueva carpeta/comillas.png';
 import zigzag from '../src/assets/images_project/Nueva carpeta/zigzag.png';
 import separator from '../src/assets/images_project/Nueva carpeta/separator.svg';
@@ -74,8 +76,8 @@ const home = () => {
           <ul>
             <li>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Doloremque temporibus obcaecati
+                Recuerdo que cuando ingrese no sabia nada de instrumentos de
+                cuerda y gracias a la profesora ahora puedo tocar el violin.
               </p>
               <img className='zigzag' src={zigzag} alt='' />
               <div className='container-cards-img'>
@@ -85,23 +87,24 @@ const home = () => {
             </li>
             <li>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Doloremque temporibus obcaecati
+                Excelencia educativa recomendado 100%, la profesora es un 10,
+                muchas gracias por su paciencia y amabilidad
               </p>
               <img className='zigzag' src={zigzag} alt='' />
               <div className='container-cards-img'>
-                <img className='profile-img' src={woman} alt='' />
+                <img className='profile-img' src={woman2} alt='' />
                 <img className='backtips-img' src={comillas} alt='' />
               </div>
             </li>
             <li>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Doloremque temporibus obcaecati
+                Llegue a este lugar a traves de un amigo que toca muy bien el
+                violonchelo le pregunte donde aprendio y me recomendo, ahora
+                tambien se tocarlo gracias...
               </p>
               <img className='zigzag' src={zigzag} alt='' />
               <div className='container-cards-img'>
-                <img className='profile-img' src={woman} alt='' />
+                <img className='profile-img' src={woman3} alt='' />
                 <img className='backtips-img' src={comillas} alt='' />
               </div>
             </li>

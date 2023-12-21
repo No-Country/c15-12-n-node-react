@@ -11,7 +11,7 @@ const footer = () => {
         <div className='container-footer'>
           <div className='footer colunm1'>
             <h1>Encuentranos aquì</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>fomentando la creatividad y el logro personal.</p>
             <br />
             <ul className='icon-social-container'>
               <li>

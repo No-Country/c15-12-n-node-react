@@ -48,7 +48,7 @@ const Modal = ({ onClose }) => {
   return (
     <div className='modal-overlay'>
       <div className='modal-content'>
-        <h2 className='modal-title'>Plan Selection Course</h2>
+        <h2 className='modal-title'>SELECCIONA TU PLAN</h2>
         <form className='formm' onSubmit={handleSubmit}>
           <div>
             <label>Curso</label>
@@ -77,6 +77,7 @@ const Modal = ({ onClose }) => {
                   value={formData.precio}
                   onChange={handleChange}
                 />
+                <br />
                 <select
                   name='moneda'
                   value={formData.moneda}
@@ -116,14 +117,14 @@ const Modal = ({ onClose }) => {
               value={formData.email}
               onChange={handleChange}
             />
+            <button
+              type='submit'
+              className='btn-modal'
+              style={{ gridColumn: 'span 2' }}
+            >
+              <strong>ENVIAR</strong>
+            </button>
           </div>
-          <button
-            type='submit'
-            className='btn-modal'
-            style={{ gridColumn: 'span 2' }}
-          >
-            <strong>ENVIAR</strong>
-          </button>
         </form>
         <img
           className='btn-close-modal'

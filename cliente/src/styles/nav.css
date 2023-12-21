@@ -19,6 +19,7 @@ nav {
 }
 
 .container-img {
+  position: absolute;
   box-shadow: 0px 0px 5px 1px gray;
   width: 50px;
   height: 50px;
@@ -94,6 +95,10 @@ button img {
 }
 
 @media screen and (min-width: 601px) and (max-width: 1024px) {
+  .container-img {
+    position: relative;
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1025px) {
@@ -120,7 +125,8 @@ button img {
   }
 
   .container-img {
-    display: none;
+    position: absolute;
+    display: flex;
   }
 
   .hamburger-menu {
@@ -156,5 +162,9 @@ button img {
   .portato-img-icon {
     width: 45px;
     height: 45px;
+  }
+  .container-img {
+    position: relative;
+    display: flex;
   }
 }
