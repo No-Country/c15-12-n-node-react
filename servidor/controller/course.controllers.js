@@ -13,7 +13,7 @@ module.exports = {
         nivel,
         precio,
         nombre,
-        apellido,
+        apellido
   
       });
 
