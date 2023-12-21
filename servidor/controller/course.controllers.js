@@ -1,11 +1,11 @@
-const CourseSchema = require("../model/course.models.js");
-//const validateMongoDbId = require("../utils/validateMongodbId");
+const CourseSchema = require("../models/course.models.js");
+const validateMongoDbId = require("../utils/validateMongodbId");
 
 module.exports = {
   CreateCourse: async (req, res) => {
     try {
       // Obtener los datos del cuerpo de la solicitud
-      const { curso, nivel, precio, nombre, apellido} = req.body;
+      const { curso, nivel, precio, nombre, apellido } = req.body;
 
       // Crear una nueva instancia del modelo Course
       const newCourse = new CourseSchema({
@@ -14,7 +14,6 @@ module.exports = {
         precio,
         nombre,
         apellido
-  
       });
 
       // Guardar el nuevo curso en la base de datos
@@ -59,12 +58,12 @@ module.exports = {
       }
 
       // Obtener los datos del cuerpo de la solicitud
-      const { curso, nivel, precio, nombre, apellido, email } = req.body;
+      const { curso, nivel, precio, nombre, apellido } = req.body;
 
       // Actualizar el curso en la base de datos
       const updatedCourse = await CourseSchema.findOneAndUpdate(
         { _id: req.course._id }, // Usar req.course._id en lugar de extraer id de req.course
-        { $set: { curso, nivel, precio, nombre, apellido, email } },
+        { $set: { curso, nivel, precio, nombre, apellido } },
         { new: true } // Devolver el documento actualizado
       );
 
@@ -93,3 +92,4 @@ module.exports = {
       .catch((error) => res.json({ message: error }));
   },
 };
+
