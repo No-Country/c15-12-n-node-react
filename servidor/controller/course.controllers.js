@@ -5,7 +5,7 @@ module.exports = {
   CreateCourse: async (req, res) => {
     try {
       // Obtener los datos del cuerpo de la solicitud
-      const { curso, nivel, precio, nombre, apellido } = req.body;
+      const { curso, nivel, precio, nombre, apellido, email } = req.body;
 
       // Crear una nueva instancia del modelo Course
       const newCourse = new CourseSchema({
@@ -13,7 +13,8 @@ module.exports = {
         nivel,
         precio,
         nombre,
-        apellido
+        apellido,
+        email,
       });
 
       // Guardar el nuevo curso en la base de datos
