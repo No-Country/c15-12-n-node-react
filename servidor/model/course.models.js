@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 
 const nivelesPreciosEnum = {
-  basico: "20USD",
-  intermedio: "50USD",
-  avanzado: "90USD",
+  basico: "20",
+  intermedio: "50",
+  avanzado: "90",
 };
 const instrumentosEnum = ["Violin", "Guitarra", "Arpa", "Ukelele"];
 const toLower = (value) => value.toLowerCase();
@@ -48,28 +48,7 @@ const CourseSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  email: {
-    type: String,
-    required: true,
-    unique: true,
-    minlength: [5, "El correo electrónico debe tener al menos 5 caracteres"],
-    validate: [
-      {
-        validator: async function (value) {
-          const emailExists = await this.constructor.findOne({ email: value });
-          return !emailExists;
-        },
-        message: "Este correo electrónico ya está registrado",
-      },
-      {
-        validator: function (value) {
-          // Validación de formato de correo electrónico
-          return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value);
-        },
-        message: "Formato de correo electrónico no válido",
-      },
-    ],
-  },
+ 
 });
 
 // Antes de guardar, hashear la contraseña
