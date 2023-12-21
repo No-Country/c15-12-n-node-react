@@ -15,3 +15,20 @@ Content-Type: application/json
     "email": "value2",
     "descripcion": "value3"
 }
+
+
+###
+POST http://localhost:3000/registerCourse HTTP/1.1
+Content-Type: application/json
+
+{   
+    
+    "curso" : "ukelele",
+    "nivel":"Intermedio",
+    "precio": "50",
+    "nombre": "Joaquin",
+    "apellido":"Gomez",
+    "email":"lolo@gmail.com"
+}
+
+###
