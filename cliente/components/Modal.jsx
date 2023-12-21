@@ -100,6 +100,7 @@ const Modal = ({ onClose }) => {
                 />
                 <br />
                 <select
+                  id='select-money'
                   name='moneda'
                   value={formData.moneda}
                   onChange={handleChange}

@@ -1,4 +1,4 @@
-const CourseSchema = require("../models/course.models.js");
+const CourseSchema = require("../model/course.models");
 const validateMongoDbId = require("../utils/validateMongodbId");
 
 module.exports = {

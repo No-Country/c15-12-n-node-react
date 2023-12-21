@@ -118,6 +118,9 @@ textarea {
     border-radius: 5px;
     border: 1px solid lightgray;
   }
+  #select-money {
+    border: none;
+  }
 
   /* Aquí puedes agregar los estilos específicos para pantallas con un ancho mínimo de 1025px */
 }
