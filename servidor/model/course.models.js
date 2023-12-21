@@ -1,10 +1,9 @@
 const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
 
 const nivelesPreciosEnum = {
-  basico: "20",
-  intermedio: "50",
-  avanzado: "90",
+  Basico: "20",
+  Intermedio: "50",
+  Avanzado: "90",
 };
 const instrumentosEnum = ["Violin", "Guitarra", "Arpa", "Ukelele"];
 const toLower = (value) => value.toLowerCase();
@@ -23,7 +22,7 @@ const CourseSchema = mongoose.Schema({
   nivel: {
     type: String,
     required: true,
-    enum: ["basico", "intermedio", "avanzado"],
+    enum: ["Basico", "Intermedio", "Avanzado"],
   },
   precio: {
     type: String,
@@ -51,20 +50,13 @@ const CourseSchema = mongoose.Schema({
   },
 });
 
-// Antes de guardar, hashear la contraseña
-CourseSchema.pre("save", async function (next) {
-  try {
-    const hashedPassword = await bcrypt.hash(this.password, 10);
-    this.password = hashedPassword;
-
-    // Verificar si el usuario está autenticado y establecer la disponibilidad del curso
-    const usuarioAutenticado = verificarAutenticacion(); //
-    this.disponibleParaAutenticados = usuarioAutenticado;
-
-    next();
-  } catch (error) {
-    next(error);
+CourseSchema.pre("validate", function (next) {
+  if (this.nivel && !this.precio) {
+    this.precio = nivelesPreciosEnum[this.nivel];
   }
+  next();
 });
+
 module.exports = mongoose.model("course", CourseSchema);
+
 
