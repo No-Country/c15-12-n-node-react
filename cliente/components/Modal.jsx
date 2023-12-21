@@ -7,24 +7,46 @@ const Modal = ({ onClose }) => {
     nombre: '',
     apellido: '',
     email: '',
-    nivel: '', // Cambiado de 'contraseña' a 'password'
+    nivel: '',
     precio: '',
-    moneda: 'USD', // Valor predeterminado en USD
+    moneda: 'USD',
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      [name]: value,
-    }));
+    if (name === 'nivel') {
+      let precio;
+      switch (value) {
+        case 'Básico':
+          precio = '20';
+          break;
+        case 'Intermedio':
+          precio = '50';
+          break;
+        case 'Avanzado':
+          precio = '90';
+          break;
+        default:
+          precio = '';
+      }
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        [name]: value,
+        precio,
+      }));
+    } else {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        [name]: value,
+      }));
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:3000/api/registerCourse', {
+      const response = await fetch('http://localhost:3000/registerCourse', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -33,10 +55,8 @@ const Modal = ({ onClose }) => {
       });
 
       if (response.ok) {
-        // La solicitud fue exitosa, puedes realizar alguna acción si es necesario
         console.log('Solicitud POST exitosa');
       } else {
-        // La solicitud no fue exitosa, maneja el error
         const errorData = await response.json();
         console.error('Error en la solicitud POST:', errorData);
       }
@@ -44,6 +64,8 @@ const Modal = ({ onClose }) => {
       console.error('Error en la solicitud POST:', error.message);
     }
   };
+
+  // ...resto del código...
 
   return (
     <div className='modal-overlay'>
@@ -60,13 +82,12 @@ const Modal = ({ onClose }) => {
               onChange={handleChange}
             />
             <label>Nivel</label>
-            <input
-              type='text'
-              name='nivel'
-              placeholder='Nivel'
-              value={formData.nivel}
-              onChange={handleChange}
-            />
+            <select name='nivel' value={formData.nivel} onChange={handleChange}>
+              <option value=''>Selecciona un nivel</option>
+              <option value='Básico'>Básico</option>
+              <option value='Intermedio'>Intermedio</option>
+              <option value='Avanzado'>Avanzado</option>
+            </select>
             <div>
               <label>Precio</label>
               <div>
@@ -75,7 +96,7 @@ const Modal = ({ onClose }) => {
                   name='precio'
                   placeholder='Precio'
                   value={formData.precio}
-                  onChange={handleChange}
+                  readOnly
                 />
                 <br />
                 <select
@@ -86,7 +107,6 @@ const Modal = ({ onClose }) => {
                   <option value='USD'>USD</option>
                   <option value='EUR'>EUR</option>
                   <option value='GBP'>GBP</option>
-                  {/* Agrega más opciones según sea necesario */}
                 </select>
               </div>
               <p>{`Precio: ${formData.precio} ${formData.moneda}`}</p>
