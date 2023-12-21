@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const bcrypt = require("bcrypt");
 
 const nivelesPreciosEnum = {
   basico: "20",
@@ -48,12 +49,13 @@ const CourseSchema = mongoose.Schema({
     type: String,
     required: true,
   },
- 
 });
 
 // Antes de guardar, hashear la contraseña
 CourseSchema.pre("save", async function (next) {
   try {
+    const hashedPassword = await bcrypt.hash(this.password, 10);
+    this.password = hashedPassword;
 
     // Verificar si el usuario está autenticado y establecer la disponibilidad del curso
     const usuarioAutenticado = verificarAutenticacion(); //
@@ -64,5 +66,5 @@ CourseSchema.pre("save", async function (next) {
     next(error);
   }
 });
-
 module.exports = mongoose.model("course", CourseSchema);
+
