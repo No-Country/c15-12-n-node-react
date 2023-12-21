@@ -84,7 +84,7 @@ const Modal = ({ onClose }) => {
             <label>Nivel</label>
             <select name='nivel' value={formData.nivel} onChange={handleChange}>
               <option value=''>Selecciona un nivel</option>
-              <option value='Básico'>Básico</option>
+              <option value='Básico'>Basico</option>
               <option value='Intermedio'>Intermedio</option>
               <option value='Avanzado'>Avanzado</option>
             </select>
@@ -109,7 +109,7 @@ const Modal = ({ onClose }) => {
                   <option value='GBP'>GBP</option>
                 </select>
               </div>
-              <p>{`Precio: ${formData.precio} ${formData.moneda}`}</p>
+              {/* <p>{`Precio: ${formData.precio} ${formData.moneda}`}</p> */}
             </div>
           </div>
           <div className='container-data'>
