@@ -49,7 +49,7 @@ const Form = () => {
   };
 
   return (
-    <div className='form-container-prime' data-aos='flip-up'>
+    <div className='form-container-prime' data-aos='zoom-in-up'>
       <h1>CONTACTO</h1>
       <img className='separator-img' src={separator} alt='' />
       <div className='container-form'>
