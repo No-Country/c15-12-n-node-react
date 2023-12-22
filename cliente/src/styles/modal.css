@@ -92,7 +92,18 @@ input:focus {
   position: relative;
   top: -35rem;
 }
-
+select {
+  text-align: center;
+  color: gray;
+  font-size: 17px;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+#select-money {
+  border: none;
+}
 @media screen and (max-width: 600px) {
 }
 

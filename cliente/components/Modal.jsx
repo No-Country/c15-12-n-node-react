@@ -17,7 +17,7 @@ const Modal = ({ onClose }) => {
     if (name === 'nivel') {
       let precio;
       switch (value) {
-        case 'Básico':
+        case 'Basico':
           precio = '20';
           break;
         case 'Intermedio':
@@ -56,9 +56,11 @@ const Modal = ({ onClose }) => {
 
       if (response.ok) {
         console.log('Solicitud POST exitosa');
+        alert('Registro Exitoso, Felicidades!!!');
       } else {
         const errorData = await response.json();
         console.error('Error en la solicitud POST:', errorData);
+        alert('Fallo el registro revisa los campos');
       }
     } catch (error) {
       console.error('Error en la solicitud POST:', error.message);
@@ -73,18 +75,22 @@ const Modal = ({ onClose }) => {
         <h2 className='modal-title'>SELECCIONA TU PLAN</h2>
         <form className='formm' onSubmit={handleSubmit}>
           <div>
-            <label>Curso</label>
-            <input
+            <label>Instrumento</label>
+            <select
               type='text'
               name='curso'
-              placeholder='Curso'
               value={formData.curso}
               onChange={handleChange}
-            />
+            >
+              <option value='Violin'>Violin</option>
+              <option value='Guitarra'>Guitarra</option>
+              <option value='Arpa'>Arpa</option>
+              <option value='Ukelele'>Ukelele</option>
+            </select>
             <label>Nivel</label>
             <select name='nivel' value={formData.nivel} onChange={handleChange}>
               <option value=''>Selecciona un nivel</option>
-              <option value='Básico'>Basico</option>
+              <option value='Basico'>Basico</option>
               <option value='Intermedio'>Intermedio</option>
               <option value='Avanzado'>Avanzado</option>
             </select>
