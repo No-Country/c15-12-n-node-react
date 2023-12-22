@@ -1,0 +1,62 @@
+GET http://localhost:3000/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "value1",
+    "password": "value2"
+}
+
+
+POST http://localhost:3000/contacto HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "value1",
+    "email": "value2",
+    "descripcion": "value3"
+}
+
+
+###
+POST http://localhost:3000/registerCourse HTTP/1.1
+Content-Type: application/json
+
+{   
+    
+    "curso" : "ukelele",
+    "nivel":"Intermedio",
+    "precio": "50",
+    "nombre": "Jose",
+    "apellido":"Garcia",
+    "email":"okoauhsdushd@gmail.com"
+}
+
+###
+
+
+###
+//get all courses
+GET http://localhost:3000/courses HTTP/1.1
+###
+
+###
+//get a course
+GET http://localhost:3000/courses/65822cfa145794f79cc4aded HTTP/1.1
+
+###
+
+//update course: 
+PUT http://localhost:3000/courses/6580d1fae64a7723d45feab6 HTTP/1.1
+Content-Type: application/json
+
+{
+    "curso": "arpa",
+    "nivel":"basico",
+    "precio":"20USD",
+    "nombre":"Yuli",
+    "apellido":"Figueroa"
+}
+
+###
+//delete course
+DELETE http://localhost:3000/courses/6580d484db0a761f34042f1f HTTP/1.1

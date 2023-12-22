@@ -1,0 +1,106 @@
+footer {
+  color: gray;
+  display: flex;
+  background-color: var(--secondary);
+  bottom: 0;
+  box-shadow: 1px 0px 17px 0px gray;
+  align-items: center;
+  justify-content: center;
+}
+.container-footer {
+  width: 350px;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+.footer-colunm1 {
+  justify-content: space-between;
+}
+.footer ul {
+  list-style: none;
+}
+.colunm2 {
+  text-align: center;
+}
+
+.imgSocial {
+  opacity: 70%;
+  width: 25px;
+}
+.icon-social-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+}
+.icon-social-container li {
+  width: 100%;
+}
+.container-footer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: 100px;
+}
+.copyrigth {
+  text-align: center;
+  border-top: 1px solid gray;
+}
+
+@media screen and (max-width: 600px) {
+  .App {
+    width: 100%;
+  }
+  /* Aquí puedes agregar los estilos específicos para pantallas con un ancho máximo de 600px */
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .App {
+    width: 100%;
+  }
+  /* Aquí puedes agregar los estilos específicos para pantallas con un ancho entre 601px y 1024px */
+}
+
+@media screen and (min-width: 1025px) {
+  footer {
+    color: gray;
+    display: block;
+    background-color: var(--secondary);
+    bottom: 0;
+    box-shadow: 1px 0px 17px 0px gray;
+  }
+  .container-footer {
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+  .footer-colunm1 {
+    justify-content: space-between;
+  }
+  .footer ul {
+    list-style: none;
+  }
+  .colunm2 {
+    text-align: center;
+  }
+
+  .imgSocial {
+    opacity: 70%;
+    width: 25px;
+  }
+  .icon-social-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    list-style: none;
+  }
+  .icon-social-container li {
+    width: 100%;
+  }
+  .container-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 100px;
+  }
+  .copyrigth {
+    text-align: center;
+    border-top: 1px solid gray;
+  }
+  /* Aquí puedes agregar los estilos específicos para pantallas con un ancho mínimo de 1025px */
+}

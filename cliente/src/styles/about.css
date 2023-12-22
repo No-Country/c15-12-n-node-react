@@ -1,0 +1,91 @@
+:root {
+  --primary-color: #12c2b9;
+  --secondary: #dbfffe;
+  --black: #141414;
+  --white: #fff;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+.about-container-principal {
+  text-align: center;
+  margin: 2rem;
+}
+.about-container-principal h1 {
+  color: var(--primary-color);
+}
+.about-container-secundary {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+  justify-content: center;
+  align-items: center;
+}
+.container-img-teacher {
+  background-color: var(--secondary);
+  margin-top: 0rem;
+  width: 350px;
+  border-radius: 100%;
+  box-shadow: 5px 1px 15px 1px gray;
+  margin-right: 0rem;
+}
+.video-teacher1 {
+  margin-top: -10rem;
+  width: 350px;
+  height: 300px;
+  border-radius: 50%;
+  margin-right: 0rem;
+  box-shadow: 5px 1px 15px 1px gray;
+}
+.video-teacher1:hover {
+  scale: 1.2;
+  filter: saturate(180%);
+}
+.hide {
+  opacity: 100%;
+}
+.about-container-principal p {
+  font-size: 20px;
+  margin-top: -5rem;
+  width: 300px;
+  text-align: justify;
+  line-height: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  /* Aquí puedes agregar los estilos específicos para pantallas con un ancho máximo de 600px */
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Aquí puedes agregar los estilos específicos para pantallas con un ancho entre 601px y 1024px */
+}
+
+@media screen and (min-width: 1025px) {
+  .about-container-secundary {
+    flex-direction: row;
+    gap: 0rem;
+  }
+  .container-img-teacher {
+    background-color: var(--secondary);
+    margin-top: -10rem;
+    width: 450px;
+    border-radius: 100%;
+    box-shadow: 5px 1px 15px 1px gray;
+    margin-right: 6rem;
+  }
+  .video-teacher1 {
+    margin-top: -10rem;
+    width: 600px;
+    height: 500px;
+    border-radius: 50%;
+    margin-right: 6rem;
+    box-shadow: 5px 1px 15px 1px gray;
+  }
+  .about-container-principal p {
+    font-size: 20px;
+    margin-top: -10rem;
+    width: 500px;
+    text-align: justify;
+    line-height: 2rem;
+  }
+  /* Aquí puedes agregar los estilos específicos para pantallas con un ancho mínimo de 1025px */
+}
