@@ -2,11 +2,13 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const createRoles = require("../utils/createRoles.js");
 const registerController = require('../controller/registerController');
 const loginController = require('../controller/loginController');
 const userController = require('../controller/userController');
 const connectDB = require('../config/db');
 const app = express();
+createRoles();
 app.use(cors());
 const bodyParser = require('body-parser');
 // parse application/x-www-form-urlencoded
